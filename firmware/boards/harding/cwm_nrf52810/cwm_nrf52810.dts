@@ -1,0 +1,53 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * Board definition for the custom wireless mouse PCB (U1: nRF52810, 32-QFN
+ * 5x5mm package). See docs/hardware/ for the full electrical design this
+ * board file targets, in particular pinout.md and open-items.md — several
+ * peripheral nodes below are deliberately left unassigned pending the GPIO
+ * pin assignment open item.
+ */
+
+/dts-v1/;
+#include <nordic/nrf52810_qfaa.dtsi>
+#include "cwm_nrf52810-pinctrl.dtsi"
+
+/ {
+	model = "Custom Wireless Mouse (nRF52810)";
+	compatible = "harding,cwm-nrf52810";
+
+	chosen {
+		zephyr,sram = &sram0;
+		zephyr,flash = &flash0;
+	};
+
+	/*
+	 * Not yet defined here, pending pin assignment
+	 * (docs/hardware/open-items.md, item 5):
+	 *
+	 *   - spi1: bus to U2 (PMW3610), pinctrl for SCLK/SDIO/NCS
+	 *     (docs/hardware/pinout.md, U1 section)
+	 *   - gpio-keys: BTN_L (SW2), BTN_R (SW3), BTN_FN (SW4), WHEEL_SW
+	 *   - PMW3610 MOTION line as a GPIO interrupt input
+	 *   - WHEEL_A / WHEEL_B quadrature inputs for ENC1
+	 *
+	 * Add these once layout fixes the P0.xx assignment for each signal.
+	 */
+};
+
+/*
+ * P0.21 doubles as the SWD RESET line (J1) per
+ * docs/hardware/pinout.md — configure it as external reset rather than a
+ * general-purpose GPIO.
+ */
+&uicr {
+	gpio-as-nreset;
+};
+
+&gpiote {
+	status = "okay";
+};
+
+&gpio0 {
+	status = "okay";
+};

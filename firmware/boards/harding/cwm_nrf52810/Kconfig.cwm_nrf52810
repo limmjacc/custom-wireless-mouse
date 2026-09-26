@@ -1,0 +1,5 @@
+# Custom Wireless Mouse — nRF52810 board (U1: nRF52810, 32-QFN 5x5mm package)
+# SPDX-License-Identifier: Apache-2.0
+
+config BOARD_CWM_NRF52810
+	select SOC_NRF52810_QFAA

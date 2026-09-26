@@ -1,0 +1,18 @@
+manifest:
+  remotes:
+    - name: ncs
+      url-base: https://github.com/nrfconnect
+
+  # Pin this to a specific nRF Connect SDK release once firmware work
+  # actually starts. Leaving this unpinned is deliberate for now: this repo
+  # has no application code yet, so there is nothing that depends on a
+  # specific SDK revision.
+  projects:
+    - name: sdk-nrf
+      repo-path: sdk-nrf
+      remote: ncs
+      revision: main
+      import: true
+
+  self:
+    path: firmware

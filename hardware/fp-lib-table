@@ -1,0 +1,12 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "local")(type "KiCad")(uri "${KIPRJMOD}/libraries/local/footprints.pretty")(options "")(descr "Project-original footprints for custom-wireless-mouse"))
+  (lib (name "pmw3610dm-sudu")(type "KiCad")(uri "${KIPRJMOD}/libraries/vendored/pmw3610dm-sudu/pmw3610dm-sudu.pretty")(options "")(descr "PMW3610DM-SUDU footprint, vendored from github.com/siderakb/pmw3610-pcb (CERN-OHL-P v2)"))
+  (lib (name "nordic-nrf52810-qcxx")(type "KiCad")(uri "${KIPRJMOD}/libraries/vendored/nordic-nrf52810-qcxx/nordic-nrf52810-qcxx.pretty")(options "")(descr "QFN-32 5x5mm footprint for nRF52810-QCxx, vendored from KiCad's own official Package_DFN_QFN library (CC-BY-SA 4.0)"))
+  (lib (name "ti-tlv61220")(type "KiCad")(uri "${KIPRJMOD}/libraries/vendored/ti-tlv61220/ti-tlv61220.pretty")(options "")(descr "SOT-23-6 footprint for TLV61220DBVT, vendored from KiCad's own official Package_TO_SOT_SMD library (CC-BY-SA 4.0)"))
+  (lib (name "ndk-nx2016sa")(type "KiCad")(uri "${KIPRJMOD}/libraries/vendored/ndk-nx2016sa/ndk-nx2016sa.pretty")(options "")(descr "2016 4-pad SMD crystal footprint, vendored from KiCad's own official Crystal library (CC-BY-SA 4.0)"))
+  (lib (name "bourns-pec11r")(type "KiCad")(uri "${KIPRJMOD}/libraries/vendored/bourns-pec11r/bourns-pec11r.pretty")(options "")(descr "PEC11R rotary encoder footprint, vendored from DigiKey's official KiCad library (CC-BY-SA 4.0)"))
+  (lib (name "panasonic-evq-p7b01p")(type "KiCad")(uri "${KIPRJMOD}/libraries/vendored/panasonic-evq-p7b01p/panasonic-evq-p7b01p.pretty")(options "")(descr "EVQ-P7 side-actuated tactile switch footprint, vendored from KiCad's own official Button_Switch_SMD library (CC-BY-SA 4.0)"))
+  (lib (name "ck-js202011scqn")(type "KiCad")(uri "${KIPRJMOD}/libraries/vendored/ck-js202011scqn/ck-js202011scqn.pretty")(options "")(descr "JS202011SCQN slide switch footprint, vendored from DigiKey's official KiCad library (CC-BY-SA 4.0)"))
+  (lib (name "samtec-tsw-104-07-t-s")(type "KiCad")(uri "${KIPRJMOD}/libraries/vendored/samtec-tsw-104-07-t-s/samtec-tsw-104-07-t-s.pretty")(options "")(descr "1x4 2.54mm pin header footprint, vendored from KiCad's own official Connector_PinHeader_2.54mm library (CC-BY-SA 4.0)"))
+)

@@ -1,0 +1,13 @@
+/*
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ * GPIO pin assignment for this board is not yet finalized — see
+ * docs/hardware/open-items.md, item 5 ("GPIO pin assignment"). The signals
+ * that will need pinctrl groups here (once assigned) are SPI to U2
+ * (PMW3610), and the plain-GPIO button/encoder inputs listed in
+ * docs/hardware/pinout.md. Populate this file when those pin numbers are
+ * fixed at layout time.
+ */
+
+&pinctrl {
+};

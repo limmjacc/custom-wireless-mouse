@@ -1,0 +1,18 @@
+# west/Zephyr build output, if a build ever lands inside this folder
+build/
+build-*/
+
+# west workspace metadata, if `west init` is ever run with this repo as the
+# workspace topdir itself (not required — see README.md for the recommended
+# out-of-tree workspace setup)
+/.west/
+
+# In case the SDK ever gets fetched as a nested workspace under firmware/
+# rather than a sibling directory outside the repo
+/zephyr/
+/nrf/
+/nrfxlib/
+/bootloader/
+/modules/
+/tools/
+/.venv/

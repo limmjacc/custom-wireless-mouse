@@ -1,0 +1,9 @@
+# Custom Wireless Mouse — nRF52810 board
+# SPDX-License-Identifier: Apache-2.0
+
+if BOARD_CWM_NRF52810
+
+config BOARD
+	default "cwm_nrf52810"
+
+endif # BOARD_CWM_NRF52810

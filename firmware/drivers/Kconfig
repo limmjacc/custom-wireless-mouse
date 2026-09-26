@@ -1,0 +1,4 @@
+# SPDX-License-Identifier: Apache-2.0
+#
+# Out-of-tree driver Kconfig for this project. Empty for now — see
+# drivers/CMakeLists.txt and drivers/sensor/pmw3610/README.md.
