@@ -12,4 +12,5 @@
   (lib (name "jst-b2b-xh-a")(type "KiCad")(uri "${KIPRJMOD}/libraries/vendored/jst-b2b-xh-a/jst-b2b-xh-a.kicad_sym")(options "")(descr "JST B2B-XH-A battery connector header, vendored from KiCad's own Connector library (CC-BY-SA 4.0)"))
   (lib (name "diodes-dmg2305uxq")(type "KiCad")(uri "${KIPRJMOD}/libraries/vendored/diodes-dmg2305uxq/diodes-dmg2305uxq.kicad_sym")(options "")(descr "Diodes Inc. DMG2305UXQ low-threshold P-channel MOSFET, reverse-battery ideal-diode protection"))
   (lib (name "littelfuse-0603l010")(type "KiCad")(uri "${KIPRJMOD}/libraries/vendored/littelfuse-0603l010/littelfuse-0603l010.kicad_sym")(options "")(descr "Littelfuse 0603L010 PPTC resettable fuse, battery short-circuit protection, vendored from KiCad's own Device library (CC-BY-SA 4.0)"))
+  (lib (name "omron-b3u-1000p")(type "KiCad")(uri "${KIPRJMOD}/libraries/vendored/omron-b3u-1000p/omron-b3u-1000p.kicad_sym")(options "")(descr "Omron B3U-1000P ultra-small SMD tactile switch (1.6mm height), low-profile wheel middle-click switch, vendored from KiCad's own Switch library (CC-BY-SA 4.0)"))
 )

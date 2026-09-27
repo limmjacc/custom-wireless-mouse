@@ -2639,6 +2639,170 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "omron-b3u-1000p:B3U-1000P"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "SW"
+				(at 1.27 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "B3U-1000P"
+				(at 0 -1.524 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "omron-b3u-1000p:switch-smd-omron-b3u-1000p"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "${KIPRJMOD}/datasheets/omron-b3u-1000p-datasheet.pdf"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Ultra-small SMD tactile switch, SPST-NO, 1.6mm actuator height, 153gf operating force - low-profile momentary pushbutton"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "switch normally-open pushbutton push-button low-profile tactile"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "B3U-1000P_0_1"
+				(circle
+					(center -2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.27) (xy 0 3.048)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 1.27) (xy -2.54 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "omron-d2fc-f-7n:D2FC-F-7N-20M"
 			(pin_names
 				(offset 0)
@@ -4196,10 +4360,6 @@
 		(uuid "9a9f7a3b-6598-400a-9c4b-205b1ffbd731")
 	)
 	(no_connect
-		(at 325.12 218.44)
-		(uuid "e21243d4-9f82-478f-8911-81c356196b2d")
-	)
-	(no_connect
 		(at 78.74 59.69)
 		(uuid "ee7e5d8c-c29d-40b7-997f-ab6dc4201504")
 	)
@@ -4523,6 +4683,16 @@
 	)
 	(wire
 		(pts
+			(xy 334.01 215.9) (xy 325.12 215.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "24644731-e532-4773-8a0c-573d7b6d52bb")
+	)
+	(wire
+		(pts
 			(xy 113.03 213.36) (xy 139.7 213.36)
 		)
 		(stroke
@@ -4700,16 +4870,6 @@
 			(type default)
 		)
 		(uuid "411c440f-266c-40f4-84e5-10a9d1755693")
-	)
-	(wire
-		(pts
-			(xy 314.96 215.9) (xy 300.99 215.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "416cdb3e-0531-4cf1-a97e-1b67f8aff2b4")
 	)
 	(wire
 		(pts
@@ -4920,6 +5080,16 @@
 			(type default)
 		)
 		(uuid "64216179-1f91-4cdf-8927-f7c272ae600e")
+	)
+	(wire
+		(pts
+			(xy 314.96 215.9) (xy 300.99 215.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "646e0cd1-fc4e-4d71-a703-8652211270b5")
 	)
 	(wire
 		(pts
@@ -5433,6 +5603,16 @@
 	)
 	(wire
 		(pts
+			(xy 334.01 215.9) (xy 334.01 223.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c3f958eb-39eb-4d95-94a5-2f951f5cabcc")
+	)
+	(wire
+		(pts
 			(xy 102.87 152.4) (xy 102.87 156.21)
 		)
 		(stroke
@@ -5643,16 +5823,6 @@
 	)
 	(wire
 		(pts
-			(xy 334.01 213.36) (xy 334.01 220.98)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d9b8f952-2cf0-498f-87a0-22aa4925df22")
-	)
-	(wire
-		(pts
 			(xy 246.38 100.33) (xy 229.87 100.33)
 		)
 		(stroke
@@ -5773,16 +5943,6 @@
 	)
 	(wire
 		(pts
-			(xy 334.01 213.36) (xy 325.12 213.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "efb47502-baac-4fb0-8ffe-1d3f3c3514f1")
-	)
-	(wire
-		(pts
 			(xy 104.14 66.04) (xy 104.14 55.88)
 		)
 		(stroke
@@ -5870,6 +6030,16 @@
 			(type default)
 		)
 		(uuid "fd8e087d-a52e-4d0e-b093-8bba927a150b")
+	)
+	(label "BTN_SCRL"
+		(at 300.99 215.9 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "16945aad-2eb7-46c7-af62-debcb9c64e1c")
 	)
 	(label "VBAT_SW"
 		(at 104.14 55.88 180)
@@ -6140,16 +6310,6 @@
 			(justify left bottom)
 		)
 		(uuid "ac61be9d-4a72-4ecc-b9f7-e76e9d57182b")
-	)
-	(label "BTN_SCRL"
-		(at 300.99 215.9 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "c016e1c5-4b2a-44a2-8333-04582690d97a")
 	)
 	(label "WHEEL_B"
 		(at 392.43 66.04 180)
@@ -6668,7 +6828,7 @@
 		)
 	)
 	(symbol
-		(lib_id "omron-d2fc-f-7n:D2FC-F-7N-20M")
+		(lib_id "omron-b3u-1000p:B3U-1000P")
 		(at 320.04 215.9 0)
 		(unit 1)
 		(body_style 1)
@@ -6688,7 +6848,7 @@
 				)
 			)
 		)
-		(property "Value" "D2FC-F-7N(20M)"
+		(property "Value" "B3U-1000P"
 			(at 320.294 223.012 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6698,7 +6858,7 @@
 				)
 			)
 		)
-		(property "Footprint" "omron-d2fc-f-7n:switch-tht-omron-d2fc-f-7n"
+		(property "Footprint" "omron-b3u-1000p:switch-smd-omron-b3u-1000p"
 			(at 320.04 215.9 0)
 			(hide yes)
 			(show_name no)
@@ -6709,7 +6869,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "${KIPRJMOD}/datasheets/omron-d2f-family-datasheet.pdf"
+		(property "Datasheet" "${KIPRJMOD}/datasheets/omron-b3u-1000p-datasheet.pdf"
 			(at 320.04 215.9 0)
 			(hide yes)
 			(show_name no)
@@ -6720,8 +6880,9 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "Ultra-small SMD tactile switch, SPST-NO, 1.6mm actuator height - low-profile wheel middle-click switch (swapped from D2FC-F-7N to clear the scroll wheel above it; UNWIRED, needs pin1/pin2 connected)"
 			(at 320.04 215.9 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6741,7 +6902,7 @@
 				)
 			)
 		)
-		(property "MPN" "D2FC-F-7N(20M)"
+		(property "MPN" "B3U-1000P"
 			(at 0 0 0)
 			(hide yes)
 			(show_name yes)
@@ -6763,7 +6924,7 @@
 				)
 			)
 		)
-		(property "DPN" "39-D2FC-F-7N(20M)-ND"
+		(property "DPN" "SW1020CT-ND"
 			(at 0 0 0)
 			(hide yes)
 			(show_name yes)
@@ -6779,9 +6940,6 @@
 		)
 		(pin "2"
 			(uuid "19436eec-f206-4486-be38-8e8d973e9c23")
-		)
-		(pin "3"
-			(uuid "6f1a2a8c-f01a-4a47-bf3c-77af5ce989e8")
 		)
 		(instances
 			(project "custom-wireless-mouse"
@@ -7518,82 +7676,6 @@
 	)
 	(symbol
 		(lib_id "local:GND")
-		(at 334.01 220.98 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "36afccd3-69c1-4fc1-a771-3ac73b589a7b")
-		(property "Reference" "#PWR049"
-			(at 334.01 218.44 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 333.756 224.79 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 334.01 220.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 334.01 220.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 334.01 220.98 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "643206de-3700-4ee6-9aaf-c7565660d21b")
-		)
-		(instances
-			(project "custom-wireless-mouse"
-				(path "/d776ca83-3842-4947-ae63-5f40f232181f"
-					(reference "#PWR049")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "local:GND")
 		(at 246.38 115.57 0)
 		(unit 1)
 		(body_style 1)
@@ -8111,6 +8193,82 @@
 			(project "custom-wireless-mouse"
 				(path "/d776ca83-3842-4947-ae63-5f40f232181f"
 					(reference "C5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "local:GND")
+		(at 334.01 223.52 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4fe4c568-4229-495e-af12-64f928b9b1c1")
+		(property "Reference" "#PWR041"
+			(at 334.01 220.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 333.756 227.33 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 334.01 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 334.01 223.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 334.01 223.52 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "04a95f05-2f9c-46d2-8dff-51f3b94f09ad")
+		)
+		(instances
+			(project "custom-wireless-mouse"
+				(path "/d776ca83-3842-4947-ae63-5f40f232181f"
+					(reference "#PWR041")
 					(unit 1)
 				)
 			)

@@ -7,7 +7,7 @@ The schematic lives at [`hardware/custom-wireless-mouse.kicad_sch`](../../hardwa
 - **Power Supply** (top-left) — J2 (battery input connector) → F1 (PPTC resettable fuse) → Q1 (P-channel MOSFET, reverse-polarity ideal-diode protection) → SW1 (power switch) → U3 (TLV61220 boost) → the shared **+VSYS** rail, with the R2/R3 feedback divider and input/output bulk caps.
 - **MCU — U1 (nRF52810)** (top-right) — U1 with its decoupling network, 32MHz crystal (Y1) and load caps, SWD header (J1), and the antenna net.
 - **Optical Sensor — U2 (PMW3610)** (bottom-left) — U2 with its VDD/VDDIO/VCP decoupling and the CP–CN charge-pump flying cap.
-- **User Input — Wheel & Buttons** (bottom-right) — ENC1 (mouse scroll wheel encoder) and SW2–SW5 (L/R/FN buttons and the wheel's middle-click). See [pinout.md](pinout.md) for their pin functions and [open-items.md](open-items.md) for what's still pending on this section (ENC1's footprint is an unconfirmed placeholder).
+- **User Input — Wheel & Buttons** (bottom-right) — ENC1 (mouse scroll wheel encoder) and SW2–SW5 (L/R/FN buttons and the wheel's middle-click). See [pinout.md](pinout.md) for their pin functions and [open-items.md](open-items.md) for what's still pending on this section (ENC1's footprint is an unconfirmed placeholder; SW5 was swapped to a low-profile part on 2026-09-27 and is currently unwired — see pinout.md).
 
 ## Conventions used
 
@@ -25,7 +25,7 @@ A full bill of materials with footprints, generated directly from the schematic 
 
 Every component on the schematic resolves a 3D model — passives via KiCad's own bundled library, the rest via each part's own vendored `3dmodels/` folder. Two of those are substitutes rather than the exact part's own model (U1 uses the real Nordic NRF52810-QCAA-T model; U2 uses a dimensionally-verified PMW3360 substitute, since no PMW3610 model exists anywhere) — see each part's `ATTRIBUTION.md` under `hardware/libraries/vendored/` for the specifics, and [open-items.md](open-items.md) for what that means going into layout.
 
-Every component also carries real sourcing information directly in its schematic fields — Manufacturer, MPN, Distributor, and DPN (distributor part number), visible via `kicad-cli sch export bom --fields Reference,Value,Manufacturer,MPN,Distributor,DPN`. This was independently verified against DigiKey.ca (this board is ordered from Alberta, Canada) as of 2026-09-27; see [bom.md](bom.md) for the full table with distributor links, pricing, and stock status, and [open-items.md](open-items.md) for the two live supply-chain risks this pass surfaced (Q1's lead time, SW2-5's discontinuation).
+Every component also carries real sourcing information directly in its schematic fields — Manufacturer, MPN, Distributor, and DPN (distributor part number), visible via `kicad-cli sch export bom --fields Reference,Value,Manufacturer,MPN,Distributor,DPN`. This was independently verified against DigiKey.ca (this board is ordered from Alberta, Canada) as of 2026-09-27; see [bom.md](bom.md) for the full table with distributor links, pricing, and stock status, and [open-items.md](open-items.md) for the two live supply-chain risks this pass surfaced (Q1's lead time, SW2-4's discontinuation).
 
 ## What isn't drawn on the schematic
 

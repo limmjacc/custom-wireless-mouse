@@ -100,7 +100,9 @@ Only section A is used:
 
 ## ENC1 — TTC/Kailh-style mouse scroll wheel encoder
 
-No integrated pushbutton — see SW5 below for the middle-click switch.
+No integrated pushbutton — see SW5 below for the middle-click switch
+(currently unwired, pending a part swap to a lower-profile switch that
+fits under the wheel).
 Pin functions (A/B/COM) below are correct per the symbol; **physical
 pin positions on the real part are unconfirmed** (see
 [`hardware/libraries/vendored/ttc-kailh-mouse-encoder/ATTRIBUTION.md`](../../hardware/libraries/vendored/ttc-kailh-mouse-encoder/ATTRIBUTION.md)).
@@ -111,15 +113,33 @@ pin positions on the real part are unconfirmed** (see
 | B | Net **WHEEL_B** |
 | COM | Net **GND** |
 
-## SW5 — wheel middle-click switch (Omron D2FC-F-7N(20M))
+## SW5 — wheel middle-click switch (Omron B3U-1000P)
 
-Same part as SW2-4.
+**Currently unwired**, as of the 2026-09-27 part swap. SW5 previously
+used the same Omron D2FC-F-7N(20M) as SW2-4, but that part's 6.5mm
+body is too tall to fit underneath the scroll wheel, which mounts on
+ENC1's shaft directly above SW5. Replaced with the Omron B3U-1000P
+(1.6mm height, 2-pin SPST-NO) — see
+[`hardware/libraries/vendored/omron-b3u-1000p/ATTRIBUTION.md`](../../hardware/libraries/vendored/omron-b3u-1000p/ATTRIBUTION.md)
+for the part-selection detail.
 
-| Pin | Connects to |
+This is a simpler 2-terminal part (no COM/NO/NC distinction like the
+D2FC), and its previous connections (pin 1 → `BTN_SCRL`, pin 3 → `GND`)
+were removed along with the old symbol rather than carried over blind,
+since the new part's pinout isn't a 1:1 match. To restore the same
+electrical behavior:
+
+| Pin | Suggested connection |
 |---|---|
-| 1 (COM) | Net **BTN_SCRL** |
-| 2 (NO) | Net **GND** |
-| 3 (NC) | Unconnected (no-connect flag) |
+| 1 | Net **BTN_SCRL** |
+| 2 | Net **GND** |
+
+Both pins are physically symmetric (per the datasheet: "No terminal
+numbers are indicated on the Switches"), so either pad may take either
+net. Still needs: schematic wiring, PCB re-placement under the wheel
+(the new footprint is far smaller and not yet positioned), and a
+physical mounting height check once the wheel/carriage mechanical
+design exists (see [open-items.md](open-items.md)).
 
 ## J1 — SWD header (Samtec TSW-104-07-T-S)
 

@@ -12,4 +12,5 @@
   (lib (name "jst-b2b-xh-a")(type "KiCad")(uri "${KIPRJMOD}/libraries/vendored/jst-b2b-xh-a/jst-b2b-xh-a.pretty")(options "")(descr "JST XH B2B-XH-A 2.50mm-pitch battery connector footprint, vendored from KiCad's own official Connector_JST library (CC-BY-SA 4.0)"))
   (lib (name "diodes-dmg2305uxq")(type "KiCad")(uri "${KIPRJMOD}/libraries/vendored/diodes-dmg2305uxq/diodes-dmg2305uxq.pretty")(options "")(descr "SOT-23 footprint for DMG2305UXQ, vendored from KiCad's own official Package_TO_SOT_SMD library (CC-BY-SA 4.0)"))
   (lib (name "littelfuse-0603l010")(type "KiCad")(uri "${KIPRJMOD}/libraries/vendored/littelfuse-0603l010/littelfuse-0603l010.pretty")(options "")(descr "0603 fuse footprint for the Littelfuse 0603L010 PPTC, vendored from KiCad's own official Fuse library (CC-BY-SA 4.0)"))
+  (lib (name "omron-b3u-1000p")(type "KiCad")(uri "${KIPRJMOD}/libraries/vendored/omron-b3u-1000p/omron-b3u-1000p.pretty")(options "")(descr "Exact-match SMD footprint for Omron B3U-1000P (1.6mm height), vendored from KiCad's own official Button_Switch_SMD library (CC-BY-SA 4.0)"))
 )
