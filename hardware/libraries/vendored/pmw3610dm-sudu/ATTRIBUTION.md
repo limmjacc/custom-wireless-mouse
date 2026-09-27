@@ -22,15 +22,42 @@ No modification was made to the underlying geometry, pin mapping, or pad
 definitions — only the file names and the internal footprint cross-reference
 were changed to fit this project's library layout.
 
-## 3D model — none found anywhere
+## 3D model — a real PMW3360 model, verified dimensionally against PMW3610
 
-No 3D STEP/WRL model for PMW3610DM-SUDU could be found through any
-channel checked: not in the open-hardware reference repository itself
-(no `3dshapes`/`.step` files exist in that project), not on PixArt's own
-datasheet or site, not on JLCPCB's EasyEDA library, and not on any
-general CAD-model search. This is consistent with the part's
-already-documented non-standard sourcing channel (absent from DigiKey/
-Mouser/LCSC) — it simply isn't the kind of part major CAD-library
-sites carry. A 3D-accurate render of this board's U2 position isn't
-achievable without either measuring the physical part and modeling it
-by hand, or asking PixArt directly.
+No 3D model exists for PMW3610DM-SUDU itself under any name — not in
+the open-hardware reference repository, not from PixArt, not on
+JLCPCB/EasyEDA, not on any general CAD-model search. Consistent with
+this part's already-documented non-standard sourcing channel (absent
+from DigiKey/Mouser/LCSC).
+
+`3dmodels/pmw3610dm-sudu-16-pin-approx.step` is instead a community
+GrabCAD model of PixArt's **PMW3360DM-T2QU**
+(<https://grabcad.com/library/pmw3360dm-mouse-sensor-1>), a different
+PixArt sensor. This is a deliberate substitution, not a mistake: both
+parts' real datasheet package outline drawings were compared
+dimension-by-dimension, and every external mechanical figure matches
+exactly —
+
+| Dimension | PMW3610DM-SUDU | PMW3360DM-T2QU |
+|---|---|---|
+| Body width | 9.10mm | 9.10mm |
+| Body length | 16.20mm | 16.20mm |
+| Width at shoulder | 10.90mm | 10.90mm |
+| Depth | 10.10mm | 10.10mm |
+| Pin count / pitch | 16 pins, 1.78mm | 16 pins, 1.78mm |
+| Pin width | 0.50mm | 0.50mm |
+| Package doc number | `LSR_INT_16A_Pkg_005` | `LED_INT_16A_Pkg_002` |
+
+Both share the same `_16A` molded lead-frame DIP tooling family (per
+PixArt's own package doc numbers) — this is PixArt reusing one
+mechanical package across sensor generations, not a coincidence.
+
+**The one real difference**: PMW3610 integrates a VCSEL laser (a
+"VCSEL hole" in its datasheet drawing); PMW3360 integrates an IR LED
+instead (a "LED Hole" in its own drawing) — different optical
+technology, different internal die, paired with a different lens
+(LM18-LSI vs. LM19-LSI). This affects the small feature right at the
+optical aperture, not the overall body silhouette, pin layout, or
+mounting footprint. Accurate for board-level 3D visualization and
+enclosure/clearance checks; not a claim that the aperture/lens detail
+is pixel-accurate to the real PMW3610 part.

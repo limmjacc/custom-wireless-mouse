@@ -1,7 +1,7 @@
-(footprint "PMW3610DM-SUDU 16Pin"
-	(version 20241229)
+(footprint "pmw3610dm-sudu-16-pin"
+	(version 20260206)
 	(generator "pcbnew")
-	(generator_version "9.0")
+	(generator_version "10.0")
 	(layer "F.Cu")
 	(descr "PMW3610DM-SUDU special 16pin molded lead-frame DIP")
 	(property "Reference" "REF**"
@@ -52,6 +52,7 @@
 		)
 	)
 	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
 	(fp_line
 		(start -8.4496 -3.7)
 		(end -8.4496 3.7)
@@ -549,4 +550,15 @@
 		)
 	)
 	(embedded_fonts no)
+	(model "${KIPRJMOD}/libraries/vendored/pmw3610dm-sudu/3dmodels/pmw3610dm-sudu-16-pin-approx.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
 )
