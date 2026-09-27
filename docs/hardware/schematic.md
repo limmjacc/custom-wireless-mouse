@@ -7,7 +7,7 @@ The schematic lives at [`hardware/custom-wireless-mouse.kicad_sch`](../../hardwa
 - **Power Supply** (top-left) — J2 (battery input connector) → F1 (PPTC resettable fuse) → Q1 (P-channel MOSFET, reverse-polarity ideal-diode protection) → SW1 (power switch) → U3 (TLV61220 boost) → the shared **+VSYS** rail, with the R2/R3 feedback divider and input/output bulk caps.
 - **MCU — U1 (nRF52810)** (top-right) — U1 with its decoupling network, 32MHz crystal (Y1) and load caps, SWD header (J1), and the antenna net.
 - **Optical Sensor — U2 (PMW3610)** (bottom-left) — U2 with its VDD/VDDIO/VCP decoupling and the CP–CN charge-pump flying cap.
-- **User Input — Wheel & Buttons** (bottom-right) — ENC1 (rotary encoder) and SW2–SW4 (tactile switches).
+- **User Input — Wheel & Buttons** (bottom-right) — ENC1 (mouse scroll wheel encoder), SW2–SW4 (L/R/FN buttons), and SW5 (wheel middle-click). ENC1 and SW2–SW5 are placed but not yet wired in — see [pinout.md](pinout.md) for their pin functions and [open-items.md](open-items.md) for what's still pending on this section specifically.
 
 ## Conventions used
 
@@ -19,12 +19,13 @@ The schematic lives at [`hardware/custom-wireless-mouse.kicad_sch`](../../hardwa
 
 ## Verification
 
-Checked with `kicad-cli sch erc` against the actual project (not a standalone file — library resolution depends on `hardware/sym-lib-table` and `fp-lib-table`). Result: **0 errors, 2 informational items**, both expected and explained below rather than bugs:
+Checked with `kicad-cli sch erc` against the actual project (not a standalone file — library resolution depends on `hardware/sym-lib-table` and `fp-lib-table`).
+
+With ENC1 and SW2/SW3/SW4/SW5 placed but not yet wired (see above), ERC currently reports 15 `pin_not_connected` errors (3 unconnected pins each, on those 5 parts) plus a handful of `unconnected_wire_endpoint`/`isolated_pin_label` warnings on the WHEEL_A/WHEEL_B/WHEEL_SW/BTN_L/BTN_R/BTN_FN net stubs left over for wiring them in — all expected for this in-progress state, not bugs. Once those parts are wired, the design returns to its otherwise-clean state: **0 errors, 1 informational item**, expected rather than a bug:
 
 - `isolated_pin_label` on the `ANT` net — genuinely a single connection point by design (a PCB trace antenna, not a second schematic pin to connect to).
-- `lib_symbol_mismatch` on ENC1 — KiCad's own consistency check comparing the schematic's cached copy of the `PEC11R-4220F-S0012` symbol against the library file; a byte-for-byte diff of the two confirms they're identical, so this reads as a tool-side cache quirk rather than a real drift. Running KiCad's own **Tools → Update Symbols from Library** on this schematic will clear it if it bothers you; it does not indicate a wiring problem.
 
-A full bill of materials with footprints, generated directly from the schematic (`kicad-cli sch export bom`), matches [`docs/hardware/bom.md`](bom.md) exactly — 33 components, no duplicate reference designators.
+A full bill of materials with footprints, generated directly from the schematic (`kicad-cli sch export bom`), matches [`docs/hardware/bom.md`](bom.md) exactly.
 
 ## What isn't drawn on the schematic
 

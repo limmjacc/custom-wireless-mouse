@@ -1,0 +1,112 @@
+(footprint "encoder-tht-placeholder-mouse-wheel"
+	(version 20260206)
+	(generator "pcbnew")
+	(generator_version "10.0")
+	(layer "F.Cu")
+	(descr "PLACEHOLDER footprint for a TTC/Kailh-style mouse scroll wheel encoder. No manufacturer mechanical drawing with pad pitch/drill dimensions could be found publicly for this part class - pad positions here are an estimate (2.54mm pitch, common encoder lead spacing) and MUST be confirmed against the physical part before PCB layout.")
+	(tags "encoder mouse scroll wheel placeholder UNCONFIRMED")
+	(property "Reference" "REF**"
+		(at 0 -6 0)
+		(layer "F.SilkS")
+		(uuid "4ebc3d28-0c33-4a7a-91a2-c6ccf8e9f0e1")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "encoder-tht-placeholder-mouse-wheel"
+		(at 0 6 0)
+		(layer "F.Fab")
+		(uuid "5be0f330-3c82-468d-8f73-772b0afcdafc")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ceb4f57e-e0a4-4f2a-a72c-33d01a9bd154")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "65979508-56ad-4a18-b011-0fcf33df21dd")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(attr through_hole)
+	(duplicate_pad_numbers_are_jumpers no)
+	(fp_circle
+		(center 0 0)
+		(end 5.5 0)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "1c826dd2-50f3-44a6-a637-e8938baadf4e")
+	)
+	(fp_circle
+		(center 0 0)
+		(end 5 0)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "bca181d9-d870-458d-be0a-f1c177518587")
+	)
+	(fp_text user "UNCONFIRMED PLACEHOLDER - measure real part before layout"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "b1cecb66-d5a8-401b-bdd4-21d4db5049bf")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.12)
+			)
+		)
+	)
+	(pad "1" thru_hole circle
+		(at -2.54 1.27)
+		(size 1.6 1.6)
+		(drill 0.9)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "3ad09efb-eb31-4627-aacc-3f965857ff24")
+	)
+	(pad "2" thru_hole circle
+		(at -2.54 -1.27)
+		(size 1.6 1.6)
+		(drill 0.9)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "83a2b435-767d-4c77-b500-511e8003088e")
+	)
+	(pad "3" thru_hole circle
+		(at 2.54 0)
+		(size 1.6 1.6)
+		(drill 0.9)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "6734f80e-5628-44d1-a36b-1d4b41ed7d38")
+	)
+	(embedded_fonts no)
+)

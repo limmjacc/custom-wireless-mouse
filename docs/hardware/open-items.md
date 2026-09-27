@@ -12,7 +12,8 @@ These were open in earlier drafts and are now closed — kept here for the recor
 
 ## Still open
 
-1. **Encoder mechanical fit.** ENC1's stock/documentation status is confirmed; its physical fit against the kit's actual wheel assembly is not, and requires the physical parts, not more research.
+1. **ENC1 footprint is an unconfirmed placeholder.** No manufacturer datasheet exists for TTC/Kailh-style mouse scroll wheel encoders (mod-market only). Pad pitch, drill size, and A/B/COM pin positions in `hardware/libraries/vendored/ttc-kailh-mouse-encoder/` are estimates and must be measured against the physical part before PCB layout — see that library's `ATTRIBUTION.md`. ENC1 and SW2-SW5 are placed on the schematic but not yet wired.
+2. **Wheel/middle-click mechanical design.** The scroll wheel's body height (5-12mm depending on wheel diameter) and SW5's clearance underneath the wheel carriage both depend on a mechanical design that doesn't exist yet.
 2. **Antenna trace geometry.** Nordic publishes reference PCB trace antenna designs for the nRF52 series; pull the actual geometry from that reference at layout time. The schematic marks pin 19 (ANT) with a single-connection label by design — there's nothing to wire on the schematic side, this is purely a layout task.
 3. **U2/LENS1 sourcing channel.** Pick and confirm one specific reseller before ordering, given absence from DigiKey, Mouser, and LCSC. Live pricing on the AliExpress-style listings was not re-confirmed this pass (storefronts block automated fetch) — re-check price before ordering.
 4. **L1 footprint.** The schematic uses a placeholder footprint (`Inductor_SMD:L_1210_3225Metric`) for L1 — confirm against Murata 1269AS-H-4R7M-P2's real package drawing before layout; no exact-match footprint was found in KiCad's bundled libraries.

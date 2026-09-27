@@ -26,14 +26,19 @@ anyone extending or re-deriving it.
    information, not copyrightable expression, so this is an original symbol
    rather than a copy of anyone's library). Footprint is KiCad's own
    bundled SOT-23-6, vendored in alongside it.
-4. **Switches, encoder, SWD header** — same pattern throughout: a real
-   footprint from KiCad's or DigiKey's official libraries where one existed
-   (encoder, both switch families, the header), with a symbol either copied
-   from KiCad's generic library equivalent (tactile switch, header) or
-   hand-drawn where the part's pin arrangement is specific enough to need it
-   (the DPDT slide switch, the encoder). Every vendor directory's
-   `ATTRIBUTION.md` says which case applies and why that specific part was
-   picked over its closest sibling.
+4. **Switches, encoder, SWD header** — SW1 (power switch) and J1 (SWD
+   header) use real footprints from KiCad's or DigiKey's official
+   libraries. SW2-SW5 (L/R/FN buttons and the wheel's middle-click) use a
+   hand-drawn footprint for the Omron D2FC-F-7N(20M) — the de-facto DIY
+   mouse-switch aftermarket standard body, chosen deliberately over an SMD
+   tactile switch so common 2-pin/3-pin swap-in switches (Kailh GM series,
+   Huano, TTC) solder directly onto this board. ENC1 (the scroll wheel
+   encoder) is a TTC/Kailh-style mouse encoder with an explicitly
+   unconfirmed placeholder footprint, since no manufacturer datasheet
+   exists for this part class — see
+   [`hardware/libraries/vendored/ttc-kailh-mouse-encoder/ATTRIBUTION.md`](../../hardware/libraries/vendored/ttc-kailh-mouse-encoder/ATTRIBUTION.md).
+   Every vendor directory's `ATTRIBUTION.md` says which case applies and
+   why that specific part was picked over its closest sibling.
 5. **Battery input and protection (J2, F1, Q1)** — a JST B2B-XH-A header
    (J2) accepts a pre-crimped harness from an external battery pack, in
    series with a Littelfuse 0603L010 PPTC resettable fuse (F1, short-circuit
