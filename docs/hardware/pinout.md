@@ -21,13 +21,13 @@ This reflects the actual connections drawn in `hardware/custom-wireless-mouse.ki
 | 6 | P0.06 | Net **SPI_NCS** → U2 pin 5 (NCS) |
 | 7 | P0.09 | Net **SENS_MOTION** → U2 pin 8 (MOTION) |
 | 8 | P0.10 | Net **SENS_NRESET** → U2 pin 7 (NRESET) |
-| 10 | P0.12 | Net **WHEEL_A** → ENC1 pin A (not yet wired — see [open-items.md](open-items.md)) |
-| 11 | P0.14 | Net **WHEEL_B** → ENC1 pin B (not yet wired) |
-| 12 | P0.15 | Net **WHEEL_SW** → SW5 (wheel middle-click switch, not yet wired) |
-| 13 | P0.16 | Net **BTN_L** → SW2 pin 1 (COM) (not yet wired) |
-| 14 | P0.18 | Net **BTN_R** → SW3 pin 1 (COM) (not yet wired) |
-| 15 | P0.20 | Net **BTN_FN** → SW4 pin 1 (COM) (not yet wired) |
-| 2, 3, 26, 27, 28 | P0.00, P0.01, P0.25, P0.28, P0.30 | **Unconnected (no-connect flags)** — reserved spare GPIOs, not used by this design |
+| 10 | P0.12 | Net **WHEEL_A** → ENC1 pin A |
+| 11 | P0.14 | Net **WHEEL_B** → ENC1 pin B |
+| 13 | P0.16 | Net **BTN_L** → SW2 pin 1 (COM) |
+| 14 | P0.18 | Net **BTN_R** → SW3 pin 1 (COM) |
+| 15 | P0.20 | Net **BTN_FN** → SW4 pin 1 (COM) |
+| 26 | P0.25 | Net **BTN_SCRL** → SW5 pin 1 (COM) — wheel middle-click |
+| 2, 3, 12, 27, 28 | P0.00, P0.01, P0.15, P0.28, P0.30 | **Unconnected (no-connect flags)** — reserved spare GPIOs, not used by this design |
 
 The GPIO-to-signal assignment above is this project's own choice (the electrical design left it unconstrained — any of the 16 available GPIOs works for any of the 11 signals). Reassigning any of them is a layout-convenience decision, not a re-design — just relabel the net.
 
@@ -100,13 +100,12 @@ Only section A is used:
 
 ## ENC1 — TTC/Kailh-style mouse scroll wheel encoder
 
-Placed on the schematic, not yet wired. No integrated pushbutton — see
-SW5 below for the middle-click switch. Pin functions (A/B/COM) below are
-correct per the symbol; **physical pin positions on the real part are
-unconfirmed** (see
+No integrated pushbutton — see SW5 below for the middle-click switch.
+Pin functions (A/B/COM) below are correct per the symbol; **physical
+pin positions on the real part are unconfirmed** (see
 [`hardware/libraries/vendored/ttc-kailh-mouse-encoder/ATTRIBUTION.md`](../../hardware/libraries/vendored/ttc-kailh-mouse-encoder/ATTRIBUTION.md)).
 
-| Pin | Intended net once wired |
+| Pin | Connects to |
 |---|---|
 | A | Net **WHEEL_A** |
 | B | Net **WHEEL_B** |
@@ -114,13 +113,13 @@ unconfirmed** (see
 
 ## SW5 — wheel middle-click switch (Omron D2FC-F-7N(20M))
 
-Same part as SW2-4. Placed on the schematic, not yet wired.
+Same part as SW2-4.
 
-| Pin | Intended net once wired |
+| Pin | Connects to |
 |---|---|
-| 1 (COM) | Net **WHEEL_SW** |
+| 1 (COM) | Net **BTN_SCRL** |
 | 2 (NO) | Net **GND** |
-| 3 (NC) | Unconnected |
+| 3 (NC) | Unconnected (no-connect flag) |
 
 ## J1 — SWD header (Samtec TSW-104-07-T-S)
 
