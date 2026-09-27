@@ -3533,7 +3533,7 @@
 				(pin passive line
 					(at -5.08 2.54 0)
 					(length 3.81)
-					(name "nRESET"
+					(name "SWDIO"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3569,7 +3569,7 @@
 				(pin passive line
 					(at -5.08 -2.54 0)
 					(length 3.81)
-					(name "SWDIO"
+					(name "GND"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3587,7 +3587,7 @@
 				(pin passive line
 					(at -5.08 -5.08 0)
 					(length 3.81)
-					(name "GND"
+					(name "~RESET"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -9080,7 +9080,7 @@
 	)
 	(symbol
 		(lib_id "local:PWR_FLAG")
-		(at 250.19 129.54 0)
+		(at 250.19 125.73 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -9090,7 +9090,7 @@
 		(dnp no)
 		(uuid "8fc36e6f-fb3e-459a-8f81-4ceeec625f62")
 		(property "Reference" "#PWR048"
-			(at 250.19 127.635 0)
+			(at 250.19 123.825 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9101,7 +9101,8 @@
 			)
 		)
 		(property "Value" "ENC_GND"
-			(at 250.19 133.35 0)
+			(at 250.19 129.54 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -9111,7 +9112,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 250.19 129.54 0)
+			(at 250.19 125.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9122,7 +9123,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 250.19 129.54 0)
+			(at 250.19 125.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9133,7 +9134,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 250.19 129.54 0)
+			(at 250.19 125.73 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

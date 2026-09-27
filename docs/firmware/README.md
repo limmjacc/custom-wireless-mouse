@@ -19,6 +19,10 @@ Responsibilities, once implemented:
   [docs/hardware/architecture.md](../hardware/architecture.md#dpi-control)
 - Power management for single-AA-cell operation
 
+See [programming.md](programming.md) for how U1 gets flashed and debugged —
+J1's SWD pinout, toolchain integration (`west flash` runners), and a cost
+comparison of debug probe options.
+
 ## Open items
 
 - GPIO pin assignment for all sensor/button/encoder signals is not yet fixed
