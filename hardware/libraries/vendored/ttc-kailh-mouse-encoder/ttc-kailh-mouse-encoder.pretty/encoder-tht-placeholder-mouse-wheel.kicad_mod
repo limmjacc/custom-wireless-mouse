@@ -8,7 +8,7 @@
 	(property "Reference" "REF**"
 		(at 0 -6 0)
 		(layer "F.SilkS")
-		(uuid "4ebc3d28-0c33-4a7a-91a2-c6ccf8e9f0e1")
+		(uuid "94934a06-0b38-45bc-a895-220fa59ddbc2")
 		(effects
 			(font
 				(size 1 1)
@@ -19,7 +19,7 @@
 	(property "Value" "encoder-tht-placeholder-mouse-wheel"
 		(at 0 6 0)
 		(layer "F.Fab")
-		(uuid "5be0f330-3c82-468d-8f73-772b0afcdafc")
+		(uuid "20d45ce6-5919-419c-93ed-edc54a331084")
 		(effects
 			(font
 				(size 1 1)
@@ -31,7 +31,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "ceb4f57e-e0a4-4f2a-a72c-33d01a9bd154")
+		(uuid "ad44b30f-1baf-4d69-8625-6f22af27b344")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -42,7 +42,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "65979508-56ad-4a18-b011-0fcf33df21dd")
+		(uuid "b0494cde-a074-4882-ba26-cd0c311a7618")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -60,7 +60,7 @@
 		)
 		(fill no)
 		(layer "F.CrtYd")
-		(uuid "1c826dd2-50f3-44a6-a637-e8938baadf4e")
+		(uuid "13f76eb2-1fed-492a-968a-fab84348a21c")
 	)
 	(fp_circle
 		(center 0 0)
@@ -71,12 +71,12 @@
 		)
 		(fill no)
 		(layer "F.Fab")
-		(uuid "bca181d9-d870-458d-be0a-f1c177518587")
+		(uuid "a2a4e679-654e-4c33-aa3d-7f1feb1ec3d3")
 	)
 	(fp_text user "UNCONFIRMED PLACEHOLDER - measure real part before layout"
 		(at 0 0 0)
 		(layer "F.Fab")
-		(uuid "b1cecb66-d5a8-401b-bdd4-21d4db5049bf")
+		(uuid "49c0970a-1f8e-469c-a0df-d7a9102dccef")
 		(effects
 			(font
 				(size 0.8 0.8)
@@ -84,40 +84,58 @@
 			)
 		)
 	)
+	(pad "" thru_hole roundrect
+		(at -1.6 -5.5 90)
+		(size 1.5 3)
+		(drill oval 1 2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.15)
+		(uuid "31e702cd-a5bd-47fb-85b6-05b2db7942d3")
+	)
+	(pad "" thru_hole roundrect
+		(at -1.6 5.5 90)
+		(size 1.5 3)
+		(drill oval 1 2)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.15)
+		(uuid "fd2a6fb9-5122-4aae-8773-b86a11936b7a")
+	)
 	(pad "1" thru_hole circle
-		(at -2.54 1.27)
+		(at 0 -2.5)
 		(size 1.6 1.6)
 		(drill 0.9)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(uuid "3ad09efb-eb31-4627-aacc-3f965857ff24")
+		(uuid "2a8d0fb1-94c7-49eb-8d83-77cfbbfbfd35")
 	)
 	(pad "2" thru_hole circle
-		(at -2.54 -1.27)
+		(at 0 0)
 		(size 1.6 1.6)
 		(drill 0.9)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(uuid "83a2b435-767d-4c77-b500-511e8003088e")
+		(uuid "20d2f24e-ba34-48bb-b3d1-305987bde17b")
 	)
 	(pad "3" thru_hole circle
-		(at 2.54 0)
+		(at 0 2.5)
 		(size 1.6 1.6)
 		(drill 0.9)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
-		(uuid "6734f80e-5628-44d1-a36b-1d4b41ed7d38")
+		(uuid "742d2cf8-eabb-4440-ae61-4939b15c9a03")
 	)
 	(embedded_fonts no)
 	(model "${KIPRJMOD}/libraries/vendored/ttc-kailh-mouse-encoder/3dmodels/encoder-tht-mouse-wheel-ttc-5mm.step"
 		(offset
-			(xyz 0 0 0)
+			(xyz -3 0 3.5)
 		)
 		(scale
-			(xyz 1 1 1)
+			(xyz 1 0.97 0.9)
 		)
 		(rotate
-			(xyz 0 90 0)
+			(xyz -0 -180 -90)
 		)
 	)
 )
