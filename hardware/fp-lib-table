@@ -9,4 +9,5 @@
   (lib (name "panasonic-evq-p7b01p")(type "KiCad")(uri "${KIPRJMOD}/libraries/vendored/panasonic-evq-p7b01p/panasonic-evq-p7b01p.pretty")(options "")(descr "EVQ-P7 side-actuated tactile switch footprint, vendored from KiCad's own official Button_Switch_SMD library (CC-BY-SA 4.0)"))
   (lib (name "ck-js202011scqn")(type "KiCad")(uri "${KIPRJMOD}/libraries/vendored/ck-js202011scqn/ck-js202011scqn.pretty")(options "")(descr "JS202011SCQN slide switch footprint, vendored from DigiKey's official KiCad library (CC-BY-SA 4.0)"))
   (lib (name "samtec-tsw-104-07-t-s")(type "KiCad")(uri "${KIPRJMOD}/libraries/vendored/samtec-tsw-104-07-t-s/samtec-tsw-104-07-t-s.pretty")(options "")(descr "1x4 2.54mm pin header footprint, vendored from KiCad's own official Connector_PinHeader_2.54mm library (CC-BY-SA 4.0)"))
+  (lib (name "jst-b2b-xh-a")(type "KiCad")(uri "${KIPRJMOD}/libraries/vendored/jst-b2b-xh-a/jst-b2b-xh-a.pretty")(options "")(descr "JST XH B2B-XH-A 2.50mm-pitch battery connector footprint, vendored from KiCad's own official Connector_JST library (CC-BY-SA 4.0)"))
 )

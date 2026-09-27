@@ -9,4 +9,5 @@
   (lib (name "panasonic-evq-p7b01p")(type "KiCad")(uri "${KIPRJMOD}/libraries/vendored/panasonic-evq-p7b01p/panasonic-evq-p7b01p.kicad_sym")(options "")(descr "Panasonic EVQ-P7B01P tactile switch, vendored from KiCad's own Switch library (CC-BY-SA 4.0)"))
   (lib (name "ck-js202011scqn")(type "KiCad")(uri "${KIPRJMOD}/libraries/vendored/ck-js202011scqn/ck-js202011scqn.kicad_sym")(options "")(descr "C&K JS202011SCQN DPDT slide switch (used as SPDT power switch)"))
   (lib (name "samtec-tsw-104-07-t-s")(type "KiCad")(uri "${KIPRJMOD}/libraries/vendored/samtec-tsw-104-07-t-s/samtec-tsw-104-07-t-s.kicad_sym")(options "")(descr "Samtec TSW-104-07-T-S SWD header, vendored from KiCad's own Connector_Generic library (CC-BY-SA 4.0)"))
+  (lib (name "jst-b2b-xh-a")(type "KiCad")(uri "${KIPRJMOD}/libraries/vendored/jst-b2b-xh-a/jst-b2b-xh-a.kicad_sym")(options "")(descr "JST B2B-XH-A battery connector header, vendored from KiCad's own Connector library (CC-BY-SA 4.0)"))
 )
