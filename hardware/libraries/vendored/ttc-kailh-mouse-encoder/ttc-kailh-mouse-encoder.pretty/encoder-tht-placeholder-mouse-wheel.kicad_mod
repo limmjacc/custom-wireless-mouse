@@ -109,4 +109,15 @@
 		(uuid "6734f80e-5628-44d1-a36b-1d4b41ed7d38")
 	)
 	(embedded_fonts no)
+	(model "${KIPRJMOD}/libraries/vendored/ttc-kailh-mouse-encoder/3dmodels/encoder-tht-mouse-wheel-ttc-5mm.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
 )

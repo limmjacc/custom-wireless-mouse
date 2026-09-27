@@ -118,4 +118,15 @@
 		(uuid "4e5d641a-78c4-4233-a4de-1fb3c2e66d44")
 	)
 	(embedded_fonts no)
+	(model "${KIPRJMOD}/libraries/vendored/omron-d2fc-f-7n/3dmodels/switch-tht-omron-d2fc-f-7n.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
 )

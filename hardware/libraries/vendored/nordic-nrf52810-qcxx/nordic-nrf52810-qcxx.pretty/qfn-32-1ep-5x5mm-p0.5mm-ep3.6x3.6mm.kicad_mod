@@ -674,7 +674,7 @@
 		(uuid "dc83ad0d-558c-42df-92d5-b8957fd8bd35")
 	)
 	(embedded_fonts no)
-	(model "${KIPRJMOD}/libraries/vendored/nordic-nrf52810-qcxx/3dmodels/qfn-32-1ep-5x5mm-p0.5mm-ep3.6x3.6mm-approx.step"
+	(model "${KIPRJMOD}/libraries/vendored/nordic-nrf52810-qcxx/3dmodels/qfn-32-1ep-5x5mm-p0.5mm-ep3.6x3.6mm.step"
 		(offset
 			(xyz 0 0 0)
 		)

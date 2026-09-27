@@ -52,16 +52,13 @@ the same idea. A 2-pin switch (e.g., Kailh GM 2.0) populates the COM and
 NO pads only, leaving the NC pad as an unconnected through-hole — no
 separate footprint is needed for the 2-pin vs. 3-pin case.
 
-## 3D model — confirmed to exist, not retrievable by automated fetch
+## 3D model
 
-Real STEP models for D2FC-F-7N(20M) specifically exist on Ultra
-Librarian, GrabCAD, and TraceParts, confirmed via each site's own
-listing page. All three sit behind bot-protection or account-gated
-downloads (Cloudflare challenge pages / CloudFront 403s were returned
-in place of a file when fetched automatically during this pass) — the
-same class of limitation already documented for other sourcing
-channels in this project. No close substitute exists in KiCad's own
-bundled 3D model pack. A human with a free account can pull the real
-model directly:
-<https://app.ultralibrarian.com/details/0a125f52-1755-11ee-9288-0ae0a3b49db5/Omron/D2FC-F-7N-20M->
-or <https://grabcad.com/library/omron-d2fc-f-7n-1>.
+`3dmodels/switch-tht-omron-d2fc-f-7n.step` is a community-uploaded
+model of the real part from GrabCAD
+(<https://grabcad.com/library/omron-d2fc-f-7n-1>), downloaded manually
+(GrabCAD requires an account for file download, which blocks automated
+fetching) and placed here unmodified. That upload includes two
+variants — straight-lead and a bent/formed-lead version; the
+**straight-lead** variant was used here, matching this footprint's
+straight-through-hole pin arrangement.

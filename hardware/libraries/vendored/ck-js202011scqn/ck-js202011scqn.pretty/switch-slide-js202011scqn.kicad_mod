@@ -277,4 +277,15 @@
 		(uuid "94bb01f2-3436-4deb-938e-bfe632dd84fa")
 	)
 	(embedded_fonts no)
+	(model "${KIPRJMOD}/libraries/vendored/ck-js202011scqn/3dmodels/switch-slide-js202011scqn.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
 )
