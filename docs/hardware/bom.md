@@ -40,7 +40,7 @@ Values sourced from `github.com/siderakb/pmw3610-pcb`'s real KiCad schematic (no
 | C12 | 10uF X7R | 0603 | 1 | VCP (pin 9) to GND — charge-pump reservoir, bulk. | **Per PixArt's own Figure 6**, which specifies two parallel caps here (bulk + HF) rather than the single 10nF the open-hardware board simplifies down to. This design follows the datasheet reference, not the simplified board. |
 | C13 | 10nF X7R | 0603 | 1 | VCP (pin 9) to GND — charge-pump reservoir, HF, parallel with C12. | Same. |
 | C14 | 100nF X7R | 0603 | 1 | CP(12)–CN(13) flying cap. | **Corrected value** — the previous pass's netlist doc guessed 10nF here; the real open-hardware schematic (and PixArt's Figure 6) both use 100nF. |
-| R1 | 10k | 0603 | 1 | NRESET (pin 7) pull-up. **Optional / DNI** — PMW3610 has a built-in weak internal pull-up on this pin. | Unchanged from prior audit. |
+| R1 | 10k | 0603 | 1 | NRESET (pin 7) pull-up to +VSYS. Populated — matches the identical resistor (10k, same topology) in the proven `siderakb/pmw3610-pcb` reference design, whose schematic does not omit it. | Cross-checked directly against that project's `.kicad_sch` and against 19 pages of PixArt's own datasheet; no internal-pull-up claim for this pin was found in either. |
 
 ## Boost regulator support passives
 

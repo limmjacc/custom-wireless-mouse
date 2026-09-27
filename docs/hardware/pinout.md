@@ -41,7 +41,7 @@ The GPIO-to-signal assignment above is this project's own choice (the electrical
 | 4 | NC | Unconnected (pin is electrically typed no-connect in the symbol) |
 | 5 | NCS | Net **SPI_NCS** |
 | 6 | VDDIO | Net **+VSYS**, plus C10 (100nF) + C11 (1uF) to GND |
-| 7 | NRESET | Net **SENS_NRESET**; R1 (10k, optional/DNI) to +VSYS if installed |
+| 7 | NRESET | Net **SENS_NRESET**; R1 (10k) pull-up to +VSYS, populated |
 | 8 | MOTION | Net **SENS_MOTION** |
 | 9 | VCP | C12 (10uF X7R) + C13 (10nF X7R) to GND, in parallel — per PixArt datasheet Figure 6 |
 | 10 | PASS_T | Direct trace to pin 1 |
