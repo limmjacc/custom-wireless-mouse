@@ -37,3 +37,17 @@ was independently confirmed live at LCSC's own product page,
 <https://www.lcsc.com/product-detail/C221666.html>, and via search of
 DigiKey's listing; that LCSC page links its own datasheet PDF copy if you
 need the full mechanical drawing before ordering.
+
+## 3D model — confirmed to exist, not retrievable by automated fetch
+
+A real STEP model for JS202011SCQN exists on Ultra Librarian and
+SnapEDA (both aggregated by Octopart), confirmed via their own listing
+pages. Both sites sit behind Cloudflare bot-protection/account-gated
+downloads that returned a bot-check page rather than a file when
+fetched automatically during this pass — the same class of limitation
+already documented for other sourcing channels in this project. No
+close substitute exists in KiCad's own bundled 3D model pack (this is
+a fairly unique DPDT slide-switch body shape, not a generic package). A
+human with a free account can pull the real model directly:
+<https://app.ultralibrarian.com/details/3ef4ef6d-1930-11e9-ab3a-0a3560a4cccc/C-K-Components/JS202011SCQN>
+or <https://www.snapeda.com/parts/JS202011SCQN/C%26K/view-part/>.

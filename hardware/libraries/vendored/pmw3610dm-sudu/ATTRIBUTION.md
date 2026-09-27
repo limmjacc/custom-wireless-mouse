@@ -21,3 +21,16 @@ name so it resolves without the rest of that project's files).
 No modification was made to the underlying geometry, pin mapping, or pad
 definitions — only the file names and the internal footprint cross-reference
 were changed to fit this project's library layout.
+
+## 3D model — none found anywhere
+
+No 3D STEP/WRL model for PMW3610DM-SUDU could be found through any
+channel checked: not in the open-hardware reference repository itself
+(no `3dshapes`/`.step` files exist in that project), not on PixArt's own
+datasheet or site, not on JLCPCB's EasyEDA library, and not on any
+general CAD-model search. This is consistent with the part's
+already-documented non-standard sourcing channel (absent from DigiKey/
+Mouser/LCSC) — it simply isn't the kind of part major CAD-library
+sites carry. A 3D-accurate render of this board's U2 position isn't
+achievable without either measuring the physical part and modeling it
+by hand, or asking PixArt directly.

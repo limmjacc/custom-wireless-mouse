@@ -60,3 +60,20 @@ buttons (see
 [`../omron-d2fc-f-7n/ATTRIBUTION.md`](../omron-d2fc-f-7n/ATTRIBUTION.md))
 for consistency, though its clearance under a real wheel carriage should
 be revisited once the mechanical/enclosure design exists.
+
+## 3D model — a real one exists for one body height, not retrievable by automated fetch
+
+A community-uploaded STEP model for a "TTC 5mm" mouse scroll wheel
+encoder exists on GrabCAD (dimensions given as 11.68 × 5.00 × 12.78mm,
+consistent with this part class's ~5mm body-height variant), mirrored
+on a paid CAD-drawing site. Neither is retrievable by automated fetch —
+GrabCAD requires an account for file download, and the mirror site's
+actual download action is behind client-side JavaScript this pass
+couldn't drive. This also only covers the 5mm body-height variant;
+this design hasn't picked a specific body height yet (that depends on
+the actual wheel part, an open mechanical decision — see
+[open-items.md](../../../../docs/hardware/open-items.md)), so even a
+successfully-downloaded model would need to be swapped for the right
+height once that's chosen. A human with a free GrabCAD account can
+check the current state of that model here:
+<https://grabcad.com/library/mouse-encoder-ttc-5mm-1>.
