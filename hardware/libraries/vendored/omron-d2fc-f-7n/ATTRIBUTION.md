@@ -76,3 +76,12 @@ fetching) and placed here unmodified. That upload includes two
 variants — straight-lead and a bent/formed-lead version; the
 **straight-lead** variant was used here, matching this footprint's
 straight-through-hole pin arrangement.
+
+**Orientation note (2026-09-27):** this file's own STEP data places the
+switch body's long axis (with its 3 pins) along a different local axis
+than the footprint expects, and its own origin sits at one corner of
+the body rather than the center. The footprint's `(model ...)` block
+applies a 90° rotation about Z plus a matching `(-6.4, 2.9, 0)` offset
+to correct both — confirmed by rendering all four instances (SW2,
+SW3, SW4, SW5, at different board rotations) with `kicad-cli pcb
+render` and checking each sits flat and centered on its 3 THT pads.

@@ -45,3 +45,13 @@ vendor-partner STEP model for this exact part
 (<https://app.ultralibrarian.com/details/3ef4ef6d-1930-11e9-ab3a-0a3560a4cccc/C-K-Components/JS202011SCQN>),
 downloaded manually (the site sits behind an account-gated download
 that blocks automated fetching) and placed here unmodified.
+
+**Orientation note (2026-09-27):** this file's own STEP data uses a
+Y-up axis convention (its Y axis is the part's true vertical/height
+axis) rather than KiCad's Z-up footprint convention. The footprint's
+`(model ...)` block applies a `-90°` rotation about X to correct this
+— confirmed by rendering the part in place with `kicad-cli pcb render`
+and checking it sits right-side-up on its pads, actuator facing up,
+rather than appearing sheared off to one side. No plain offset alone
+could fix this; it was an axis-convention mismatch, not a placement
+error.

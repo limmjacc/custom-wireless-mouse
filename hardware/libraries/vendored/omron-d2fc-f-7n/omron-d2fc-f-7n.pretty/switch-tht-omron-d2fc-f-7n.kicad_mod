@@ -120,13 +120,13 @@
 	(embedded_fonts no)
 	(model "${KIPRJMOD}/libraries/vendored/omron-d2fc-f-7n/3dmodels/switch-tht-omron-d2fc-f-7n.step"
 		(offset
-			(xyz 0 0 0)
+			(xyz -6.4 2.9 0)
 		)
 		(scale
 			(xyz 1 1 1)
 		)
 		(rotate
-			(xyz 0 0 0)
+			(xyz 0 0 90)
 		)
 	)
 )

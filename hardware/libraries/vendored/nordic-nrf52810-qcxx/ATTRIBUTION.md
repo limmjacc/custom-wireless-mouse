@@ -33,3 +33,14 @@ NRF52810-QCAA-T,
 <https://app.ultralibrarian.com/details/ff3fee79-22f4-11eb-9033-0a34d6323d74/Nordic-Semiconductor/NRF52810-QCAA-T>),
 downloaded manually (the site sits behind an account-gated download
 that blocks automated fetching) and placed here unmodified.
+
+**Orientation note (2026-09-27):** this file's own STEP data uses a
+Y-up axis convention (its Y axis is the part's true vertical/height
+axis, confirmed by parsing the file's `CARTESIAN_POINT` entities: X and
+Z both span the full 5mm package width, Y spans only ~0.9mm — the real
+package height) rather than KiCad's Z-up footprint convention. The
+footprint's `(model ...)` block applies a `-90°` rotation about X to
+correct this — confirmed by rendering the part in place with
+`kicad-cli pcb render` and checking the QFN body, pin-1 dot marker, and
+gull-wing leads sit correctly centered on the pads rather than sheared
+off to one side.

@@ -91,3 +91,23 @@ open mechanical decision — see
 [open-items.md](../../../../docs/hardware/open-items.md)) — if a
 different height ends up being needed, this model should be swapped for
 the matching one rather than assumed correct.
+
+**Orientation note (2026-09-27) — best-effort, not fully resolved.**
+This model originally rendered with its pins pointing straight up out
+of the board and its shaft hidden — clearly wrong. The footprint's
+`(model ...)` block now applies a 90° rotation about Y, which produces
+a plausible result (body flat on the board, shaft protruding
+horizontally toward where the physical wheel would sit, consistent
+with a real mouse scroll-wheel encoder's shape) and was chosen out of
+several candidates tested by rendering each with `kicad-cli pcb
+render`. However, unlike the other three components fixed in this same
+pass, this one could **not** be fully verified: no rotation tested
+placed all three modeled leads cleanly into the footprint's three round
+THT pads (some candidates got the shaft right but showed the leads as
+flat tabs lying sideways on the board surface, not entering the holes).
+This is consistent with — and does not change — this footprint's
+existing status as an unconfirmed placeholder: the model's own lead
+geometry may simply not match this footprint's guessed pad positions,
+since neither has ever been checked against the physical part. Treat
+the current orientation as "looks mechanically sane for a fit-check,"
+not as "pin-registration verified."
