@@ -52,6 +52,20 @@ the same idea. A 2-pin switch (e.g., Kailh GM 2.0) populates the COM and
 NO pads only, leaving the NC pad as an unconnected through-hole — no
 separate footprint is needed for the 2-pin vs. 3-pin case.
 
+## Sourcing note (2026-09-27)
+
+DigiKey.ca (SKU 39-D2FC-F-7N(20M)-ND,
+<https://www.digikey.ca/en/products/detail/omron-electronics-inc-emc-div/D2FC-F-7N-20M/20484121>)
+lists this part as **manufacturer-discontinued** — its own listing
+states it will no longer be stocked once depleted, with 4,658 units
+remaining at the time of this check. That's enough for a small-batch
+build, not a long-term production source. No same-footprint active
+replacement was found at DigiKey or Mouser during this pass; if this
+stock runs out before a future build, the mod-market ecosystem
+described above (Kailh GM-series, Huano, TTC — all sharing this
+identical body) is the fallback channel. See
+[open-items.md](../../../../docs/hardware/open-items.md) item 13.
+
 ## 3D model
 
 `3dmodels/switch-tht-omron-d2fc-f-7n.step` is a community-uploaded

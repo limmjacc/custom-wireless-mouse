@@ -90,7 +90,7 @@ Only section A is used:
 | 1 | J2 pin 1 (+) |
 | 2 | Q1 pin 2 (Source) |
 
-## Q1 — reverse-polarity protection (Diodes Inc. DMP2035U, P-channel MOSFET)
+## Q1 — reverse-polarity protection (Diodes Inc. DMG2305UXQ, P-channel MOSFET)
 
 | Pin | Name | Connects to |
 |---|---|---|

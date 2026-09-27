@@ -10,6 +10,6 @@
   (lib (name "ck-js202011scqn")(type "KiCad")(uri "${KIPRJMOD}/libraries/vendored/ck-js202011scqn/ck-js202011scqn.kicad_sym")(options "")(descr "C&K JS202011SCQN DPDT slide switch (used as SPDT power switch)"))
   (lib (name "samtec-tsw-104-07-t-s")(type "KiCad")(uri "${KIPRJMOD}/libraries/vendored/samtec-tsw-104-07-t-s/samtec-tsw-104-07-t-s.kicad_sym")(options "")(descr "Samtec TSW-104-07-T-S SWD header, vendored from KiCad's own Connector_Generic library (CC-BY-SA 4.0)"))
   (lib (name "jst-b2b-xh-a")(type "KiCad")(uri "${KIPRJMOD}/libraries/vendored/jst-b2b-xh-a/jst-b2b-xh-a.kicad_sym")(options "")(descr "JST B2B-XH-A battery connector header, vendored from KiCad's own Connector library (CC-BY-SA 4.0)"))
-  (lib (name "diodes-dmp2035u")(type "KiCad")(uri "${KIPRJMOD}/libraries/vendored/diodes-dmp2035u/diodes-dmp2035u.kicad_sym")(options "")(descr "Diodes Inc. DMP2035U low-threshold P-channel MOSFET, reverse-battery ideal-diode protection"))
+  (lib (name "diodes-dmg2305uxq")(type "KiCad")(uri "${KIPRJMOD}/libraries/vendored/diodes-dmg2305uxq/diodes-dmg2305uxq.kicad_sym")(options "")(descr "Diodes Inc. DMG2305UXQ low-threshold P-channel MOSFET, reverse-battery ideal-diode protection"))
   (lib (name "littelfuse-0603l010")(type "KiCad")(uri "${KIPRJMOD}/libraries/vendored/littelfuse-0603l010/littelfuse-0603l010.kicad_sym")(options "")(descr "Littelfuse 0603L010 PPTC resettable fuse, battery short-circuit protection, vendored from KiCad's own Device library (CC-BY-SA 4.0)"))
 )

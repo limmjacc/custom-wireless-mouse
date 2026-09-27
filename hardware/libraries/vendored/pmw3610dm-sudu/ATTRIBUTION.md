@@ -22,6 +22,18 @@ No modification was made to the underlying geometry, pin mapping, or pad
 definitions — only the file names and the internal footprint cross-reference
 were changed to fit this project's library layout.
 
+## Where to actually buy this part
+
+Confirmed live listing (2026-09-27): AliExpress item 1005007118767775,
+"New and Original PMW3610DM-SUDU + LM18-LSI DIP" —
+<https://de.aliexpress.com/item/1005007118767775.html> (same listing,
+mirrored across AliExpress's regional storefronts). This bundles the
+sensor with its matched LM18-LSI lens (LENS1 on the schematic), sold
+together rather than separately. This part remains genuinely absent
+from DigiKey, Mouser, and LCSC — that is a real characteristic of its
+supply chain, not a gap in this project's sourcing effort. Re-check
+price/stock on the live listing before ordering.
+
 ## 3D model — a real PMW3360 model, verified dimensionally against PMW3610
 
 No 3D model exists for PMW3610DM-SUDU itself under any name — not in

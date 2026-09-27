@@ -42,7 +42,7 @@ anyone extending or re-deriving it.
 5. **Battery input and protection (J2, F1, Q1)** — a JST B2B-XH-A header
    (J2) accepts a pre-crimped harness from an external battery pack, in
    series with a Littelfuse 0603L010 PPTC resettable fuse (F1, short-circuit
-   protection) and a Diodes Inc. DMP2035U P-channel MOSFET (Q1, wired as a
+   protection) and a Diodes Inc. DMG2305UXQ P-channel MOSFET (Q1, wired as a
    high-side ideal diode for reverse-polarity protection) ahead of SW1 and
    U3. Symbols, footprints, and 3D models for all three are vendored from
    KiCad's own official libraries; see each part's `ATTRIBUTION.md` under

@@ -1,4 +1,4 @@
-(footprint "sot-23-dmp2035u"
+(footprint "sot-23-dmg2305uxq"
 	(version 20260206)
 	(generator "pcbnew")
 	(generator_version "10.0")
@@ -16,7 +16,7 @@
 			)
 		)
 	)
-	(property "Value" "sot-23-dmp2035u"
+	(property "Value" "sot-23-dmg2305uxq"
 		(at 0 2.4 0)
 		(layer "F.Fab")
 		(uuid "db68c5c0-897a-4668-93bb-efb044b2566c")
@@ -350,7 +350,7 @@
 		(uuid "f27eb0d5-ff62-4fc6-9923-5cef1dbaa82e")
 	)
 	(embedded_fonts no)
-	(model "${KIPRJMOD}/libraries/vendored/diodes-dmp2035u/3dmodels/sot-23-dmp2035u.step"
+	(model "${KIPRJMOD}/libraries/vendored/diodes-dmg2305uxq/3dmodels/sot-23-dmg2305uxq.step"
 		(offset
 			(xyz 0 0 0)
 		)

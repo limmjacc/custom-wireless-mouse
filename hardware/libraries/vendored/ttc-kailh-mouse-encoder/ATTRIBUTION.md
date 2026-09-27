@@ -35,6 +35,24 @@ What's confirmed, from the manufacturer/reseller pages themselves:
   wheel part chosen, which is a mechanical/enclosure decision outside
   this pass's scope.
 
+## Where to actually buy this part
+
+Confirmed live listings (2026-09-27), both from Ausmodshop, a mod-shop
+retailer (not a standard electronics distributor — this part class has
+no DigiKey/Mouser/LCSC listing, as explained above):
+
+- [Kailh mouse scroll wheel encoder](https://ausmodshop.com/products/kailh-mouse-scroll-wheel-encoder) —
+  $4.95 AUD, in stock in 7/8/10/11/12/13/14mm body heights (9mm out of
+  stock at time of check)
+- [TTC Gold mouse scroll wheel encoder](https://ausmodshop.com/products/ttc-gold-mouse-scroll-wheel-encoder) —
+  $5.95 AUD, in stock in 7/8/9mm body heights (10/11mm out of stock at
+  time of check)
+
+Neither listing publishes a pinout or mechanical drawing, consistent
+with this part class having no engineering documentation anywhere —
+the footprint here remains an unconfirmed placeholder regardless of
+which listing is ordered from.
+
 What's **not** confirmed, and must be measured against the physical
 part before finalizing a PCB layout:
 - Exact pin pitch and pin diameter (this footprint guesses 2.54mm pitch,

@@ -25,6 +25,8 @@ A full bill of materials with footprints, generated directly from the schematic 
 
 Every component on the schematic resolves a 3D model — passives via KiCad's own bundled library, the rest via each part's own vendored `3dmodels/` folder. Two of those are substitutes rather than the exact part's own model (U1 uses the real Nordic NRF52810-QCAA-T model; U2 uses a dimensionally-verified PMW3360 substitute, since no PMW3610 model exists anywhere) — see each part's `ATTRIBUTION.md` under `hardware/libraries/vendored/` for the specifics, and [open-items.md](open-items.md) for what that means going into layout.
 
+Every component also carries real sourcing information directly in its schematic fields — Manufacturer, MPN, Distributor, and DPN (distributor part number), visible via `kicad-cli sch export bom --fields Reference,Value,Manufacturer,MPN,Distributor,DPN`. This was independently verified against DigiKey.ca (this board is ordered from Alberta, Canada) as of 2026-09-27; see [bom.md](bom.md) for the full table with distributor links, pricing, and stock status, and [open-items.md](open-items.md) for the two live supply-chain risks this pass surfaced (Q1's lead time, SW2-5's discontinuation).
+
 ## What isn't drawn on the schematic
 
 - **LENS1** (the PMW3610's matched lens) — a mechanical part with no electrical connection. Noted in a text callout next to U2.
