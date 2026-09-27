@@ -13,8 +13,8 @@ This reflects the actual connections drawn in `hardware/custom-wireless-mouse.ki
 | 24 | XC2 | Y1 pin 3, plus C7 (12pF) to GND |
 | 19 | ANT | Net **ANT** — PCB trace antenna, single connection point by design (see [architecture.md](architecture.md#antenna)) |
 | 17 | SWDCLK | J1 pin 2 |
-| 18 | SWDIO | J1 pin 1 |
-| 16 | P0.21 / RESET | J1 pin 4 (~RESET) |
+| 18 | SWDIO | J1 pin 3 |
+| 16 | P0.21 / RESET | J1 pin 1 (~RESET) |
 | 31 | DCC | **Unconnected (no-connect flag)** — internal LDO only, no DC/DC inductor used (see [architecture.md](architecture.md#single-shared-power-rail)) |
 | 4 | P0.04 | Net **SPI_SCLK** → U2 pin 3 (SCLK) |
 | 5 | P0.05 | Net **SPI_SDIO** → U2 pin 2 (SDIO) |
@@ -56,7 +56,7 @@ The GPIO-to-signal assignment above is this project's own choice (the electrical
 
 | Pin | Name | Connects to |
 |---|---|---|
-| 6 | VBAT | SW1 pin 1 (switched B1+) |
+| 6 | VBAT | Net **VBAT_SW** — SW1 pin 1, the switched output of the power path (J2 → F1 → Q1 → SW1) |
 | 1 | SW | L1, other end to VOUT node |
 | 2 | GND | Net **GND** |
 | 3 | EN | Tied to VBAT (pin 6) — always-on, no software shutdown |
@@ -71,10 +71,32 @@ Only section A is used:
 
 | Pin | Connects to |
 |---|---|
-| 1 (1A) | Unconnected (no-connect flag) — the switch's other throw position |
-| 2 (2A) | B1 '+' (common) |
-| 3 (3A) | U3 pin 6 (VBAT) — the switched output |
+| 1 (1A) | Net **VBAT_SW** — the switched output, feeding U3 pin 6 (VBAT) and pin 3 (EN) |
+| 2 (2A) | Q1 pin 3 (Drain) — the common/input, fed from the protected battery rail |
+| 3 (3A) | Unconnected (no-connect flag) — the switch's other throw position |
 | 4, 5, 6 (section B) | Unconnected (electrically typed no-connect in the symbol) |
+
+## J2 — battery input (JST B2B-XH-A)
+
+| Pin | Connects to |
+|---|---|
+| 1 (+) | F1 pin 1 |
+| 2 (−) | Net **GND** |
+
+## F1 — short-circuit protection (Littelfuse 0603L010 PPTC fuse)
+
+| Pin | Connects to |
+|---|---|
+| 1 | J2 pin 1 (+) |
+| 2 | Q1 pin 2 (Source) |
+
+## Q1 — reverse-polarity protection (Diodes Inc. DMP2035U, P-channel MOSFET)
+
+| Pin | Name | Connects to |
+|---|---|---|
+| 1 | Gate | Net **GND** |
+| 2 | Source | F1 pin 2 |
+| 3 | Drain | SW1 pin 2 (2A) — feeds the switch, which feeds U3 |
 
 ## ENC1 — PEC11R-4220F-S0012
 
@@ -89,9 +111,16 @@ Only section A is used:
 
 ## J1 — SWD header (Samtec TSW-104-07-T-S)
 
+A plain, unkeyed 4-pin 0.1" header — this pin order is this project's own
+choice, not an external standard (there is no universal pinout for a bare
+4-pin SWD header the way there is for ARM's shrouded 10-pin Cortex Debug
+connector or a Tag-Connect footprint). Anyone wiring a probe to this header
+should wire to the labels below, not assume a conventional SWDIO-first
+ordering.
+
 | Pin | Signal |
 |---|---|
-| 1 | SWDIO |
+| 1 | nRESET |
 | 2 | SWDCLK |
-| 3 | GND |
-| 4 | ~RESET |
+| 3 | SWDIO |
+| 4 | GND |

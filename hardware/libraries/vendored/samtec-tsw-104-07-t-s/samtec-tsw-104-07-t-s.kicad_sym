@@ -146,7 +146,7 @@
 			(pin passive line
 				(at -5.08 2.54 0)
 				(length 3.81)
-				(name "SWDIO"
+				(name "nRESET"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -182,7 +182,7 @@
 			(pin passive line
 				(at -5.08 -2.54 0)
 				(length 3.81)
-				(name "GND"
+				(name "SWDIO"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -200,7 +200,7 @@
 			(pin passive line
 				(at -5.08 -5.08 0)
 				(length 3.81)
-				(name "~RESET"
+				(name "GND"
 					(effects
 						(font
 							(size 1.27 1.27)

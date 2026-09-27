@@ -4,7 +4,7 @@ The schematic lives at [`hardware/custom-wireless-mouse.kicad_sch`](../../hardwa
 
 ## Sections
 
-- **Power Supply** (top-left) — B1 → SW1 → U3 (TLV61220 boost) → the shared **+VSYS** rail, with the R2/R3 feedback divider and input/output bulk caps.
+- **Power Supply** (top-left) — J2 (battery input connector) → F1 (PPTC resettable fuse) → Q1 (P-channel MOSFET, reverse-polarity ideal-diode protection) → SW1 (power switch) → U3 (TLV61220 boost) → the shared **+VSYS** rail, with the R2/R3 feedback divider and input/output bulk caps.
 - **MCU — U1 (nRF52810)** (top-right) — U1 with its decoupling network, 32MHz crystal (Y1) and load caps, SWD header (J1), and the antenna net.
 - **Optical Sensor — U2 (PMW3610)** (bottom-left) — U2 with its VDD/VDDIO/VCP decoupling and the CP–CN charge-pump flying cap.
 - **User Input — Wheel & Buttons** (bottom-right) — ENC1 (rotary encoder) and SW2–SW4 (tactile switches).
@@ -24,9 +24,8 @@ Checked with `kicad-cli sch erc` against the actual project (not a standalone fi
 - `isolated_pin_label` on the `ANT` net — genuinely a single connection point by design (a PCB trace antenna, not a second schematic pin to connect to).
 - `lib_symbol_mismatch` on ENC1 — KiCad's own consistency check comparing the schematic's cached copy of the `PEC11R-4220F-S0012` symbol against the library file; a byte-for-byte diff of the two confirms they're identical, so this reads as a tool-side cache quirk rather than a real drift. Running KiCad's own **Tools → Update Symbols from Library** on this schematic will clear it if it bothers you; it does not indicate a wiring problem.
 
-A full bill of materials with footprints, generated directly from the schematic (`kicad-cli sch export bom`), matches [`docs/hardware/bom.md`](bom.md) exactly — 30 components, no duplicate reference designators.
+A full bill of materials with footprints, generated directly from the schematic (`kicad-cli sch export bom`), matches [`docs/hardware/bom.md`](bom.md) exactly — 33 components, no duplicate reference designators.
 
 ## What isn't drawn on the schematic
 
 - **LENS1** (the PMW3610's matched lens) — a mechanical part with no electrical connection. Noted in a text callout next to U2.
-- **B1's actual footprint** — left blank; it's the kit's existing battery holder, not a part this project is sourcing.

@@ -8,7 +8,7 @@ name: samtec-tsw-104-07-t-s-attribution
   from KiCad's own bundled `Connector_Generic.kicad_sym`, symbol
   `Conn_01x04` — a generic 4-pin single-row connector. Only the pin *names*
   were changed, from generic `Pin_1..4` to this design's actual SWD signal
-  names (SWDIO, SWDCLK, GND, ~RESET — see
+  names (pin 1 = nRESET, pin 2 = SWDCLK, pin 3 = SWDIO, pin 4 = GND — see
   [docs/hardware/pinout.md](../../../../docs/hardware/pinout.md)); pin
   numbers, the symbol drawing, and electrical types are unmodified.
 - **Footprint**
@@ -25,7 +25,9 @@ name: samtec-tsw-104-07-t-s-attribution
 
 ## Pin assignment note
 
-This design assigns pin 1 = SWDIO, pin 2 = SWDCLK, pin 3 = GND, pin 4 =
-~RESET. This is this project's own choice (the original design doc left the
-exact pin order unspecified) — confirm it matches whatever SWD probe/adapter
-cable is actually used before relying on a fixed pinout at the bench.
+This design assigns pin 1 = nRESET, pin 2 = SWDCLK, pin 3 = SWDIO, pin 4 =
+GND. This is a plain, unkeyed 4-pin 0.1" header — there is no external
+standard pinout for a connector like this (unlike, say, ARM's shrouded
+10-pin Cortex Debug connector or a Tag-Connect footprint), so this order is
+purely this project's own choice. Wire to a probe using these pin labels
+directly rather than assuming a conventional SWDIO-first ordering.
