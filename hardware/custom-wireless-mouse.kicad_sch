@@ -4324,10 +4324,6 @@
 		(uuid "108573d4-4b22-4a09-91cd-cfd3c2f6b48e")
 	)
 	(no_connect
-		(at 325.12 184.15)
-		(uuid "19c3ba58-5cab-4708-acec-b97aefaf6f34")
-	)
-	(no_connect
 		(at 377.19 184.15)
 		(uuid "2394316c-4122-4916-b2ef-16efde0196c9")
 	)
@@ -4338,6 +4334,10 @@
 	(no_connect
 		(at 78.74 80.01)
 		(uuid "4b14ddd3-20d5-4f38-b645-d34a6719af34")
+	)
+	(no_connect
+		(at 369.57 76.2)
+		(uuid "5075de63-b532-4507-ad05-ac8efea6f486")
 	)
 	(no_connect
 		(at 369.57 81.28)
@@ -4640,16 +4640,6 @@
 			(type default)
 		)
 		(uuid "1c41cb1f-82d0-4017-8495-e8a6b2c80262")
-	)
-	(wire
-		(pts
-			(xy 314.96 181.61) (xy 300.99 181.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1e70ca7d-8526-480f-97ba-b051a93f9aed")
 	)
 	(wire
 		(pts
@@ -5283,16 +5273,6 @@
 	)
 	(wire
 		(pts
-			(xy 392.43 76.2) (xy 369.57 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "85743879-c270-4936-ad4e-4fc66e3f6ae0")
-	)
-	(wire
-		(pts
 			(xy 142.24 66.04) (xy 142.24 76.2)
 		)
 		(stroke
@@ -5380,16 +5360,6 @@
 			(type default)
 		)
 		(uuid "9bde6357-873b-466a-a11c-c7057670e6cc")
-	)
-	(wire
-		(pts
-			(xy 334.01 179.07) (xy 325.12 179.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9cec5d2a-4773-4812-9c57-0a6d0d6657cc")
 	)
 	(wire
 		(pts
@@ -5590,16 +5560,6 @@
 			(type default)
 		)
 		(uuid "bcdccd4c-1978-445b-9e01-2732182c4dc9")
-	)
-	(wire
-		(pts
-			(xy 334.01 179.07) (xy 334.01 186.69)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bf245750-5b5a-424a-9903-0acb3ccd9ed5")
 	)
 	(wire
 		(pts
@@ -6071,16 +6031,6 @@
 		)
 		(uuid "1e1e2cf8-1094-43a7-b396-7545df4a3cf7")
 	)
-	(label "BTN_FN"
-		(at 300.99 181.61 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "28f5b2f6-9d02-4137-8b40-45d8b74507b5")
-	)
 	(label "SWDIO"
 		(at 307.34 83.82 0)
 		(effects
@@ -6100,16 +6050,6 @@
 			(justify left bottom)
 		)
 		(uuid "383aa2b3-1444-4e9a-8c81-961a1d7ac3f5")
-	)
-	(label "BTN_FN"
-		(at 392.43 76.2 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "417d650e-b692-4b8b-b51c-581531fa0820")
 	)
 	(label "BTN_L"
 		(at 353.06 181.61 0)
@@ -6880,7 +6820,7 @@
 				)
 			)
 		)
-		(property "Description" "Ultra-small SMD tactile switch, SPST-NO, 1.6mm actuator height - low-profile wheel middle-click switch (swapped from D2FC-F-7N to clear the scroll wheel above it; UNWIRED, needs pin1/pin2 connected)"
+		(property "Description" "Ultra-small SMD tactile switch, SPST-NO, 1.6mm actuator height - low-profile wheel middle-click switch (swapped from D2FC-F-7N to clear the scroll wheel above it; pin1=BTN_SCRL, pin2=GND)"
 			(at 320.04 215.9 0)
 			(hide yes)
 			(show_name no)
@@ -7821,131 +7761,6 @@
 			(project "custom-wireless-mouse"
 				(path "/d776ca83-3842-4947-ae63-5f40f232181f"
 					(reference "#PWR033")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "omron-d2fc-f-7n:D2FC-F-7N-20M")
-		(at 320.04 181.61 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "45b341f7-32cb-4f12-aa1e-4f7694a39f69")
-		(property "Reference" "SW4"
-			(at 320.04 174.752 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "D2FC-F-7N(20M)"
-			(at 320.04 188.722 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "omron-d2fc-f-7n:switch-tht-omron-d2fc-f-7n"
-			(at 320.04 181.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "${KIPRJMOD}/datasheets/omron-d2f-family-datasheet.pdf"
-			(at 320.04 181.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 320.04 181.61 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Omron"
-			(at 0 0 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "MPN" "D2FC-F-7N(20M)"
-			(at 0 0 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Distributor" "DigiKey.ca"
-			(at 0 0 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "DPN" "39-D2FC-F-7N(20M)-ND"
-			(at 0 0 0)
-			(hide yes)
-			(show_name yes)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "1f0e8e70-a51a-4f8a-a6e2-6ebfdb84cd57")
-		)
-		(pin "2"
-			(uuid "864a82db-953e-4e8e-9374-6eafa9fa2084")
-		)
-		(pin "3"
-			(uuid "e3a19735-7de3-494f-8647-f8b14e18defb")
-		)
-		(instances
-			(project "custom-wireless-mouse"
-				(path "/d776ca83-3842-4947-ae63-5f40f232181f"
-					(reference "SW4")
 					(unit 1)
 				)
 			)
@@ -10721,82 +10536,6 @@
 			(project "custom-wireless-mouse"
 				(path "/d776ca83-3842-4947-ae63-5f40f232181f"
 					(reference "C1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "local:GND")
-		(at 334.01 186.69 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "a6f06c71-786d-4abf-b87f-0d9bd8ab2384")
-		(property "Reference" "#PWR040"
-			(at 334.01 184.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 333.756 190.5 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 334.01 186.69 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 334.01 186.69 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 334.01 186.69 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "982e12ed-22dd-4b81-bb67-3d9e97dec8d1")
-		)
-		(instances
-			(project "custom-wireless-mouse"
-				(path "/d776ca83-3842-4947-ae63-5f40f232181f"
-					(reference "#PWR040")
 					(unit 1)
 				)
 			)

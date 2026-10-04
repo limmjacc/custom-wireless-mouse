@@ -66,8 +66,12 @@ undocumented MCU — on this board, it's exposed on purpose from the start.
 
 ## DPI control
 
-BTN_FN (SW4) is wired as a plain GPIO input with no fixed behavior baked into
-hardware. Since this board's firmware is fully custom, DPI stepping, or any
-other function assigned to this button, is entirely a firmware decision —
-this was the original motivating problem for the whole project, and this
-design makes it a non-issue by construction.
+The dedicated function button (SW4/BTN_FN) was removed during PCB layout —
+the board didn't have room for a fourth button footprint once routing was
+underway (see [open-items.md](open-items.md)). There is no dedicated DPI/function
+button on this board as a result. Since this board's firmware is fully
+custom, any DPI stepping or other secondary function would need to be
+remapped onto a combination of the remaining buttons (L/R/middle-click) in
+firmware — this was the original motivating problem for the whole project,
+and keeping all button behavior in firmware rather than hardware means
+this remains a firmware-only decision, not a hardware blocker.

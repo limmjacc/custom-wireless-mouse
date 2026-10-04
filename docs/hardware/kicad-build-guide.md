@@ -28,11 +28,15 @@ anyone extending or re-deriving it.
    bundled SOT-23-6, vendored in alongside it.
 4. **Switches, encoder, SWD header** — SW1 (power switch) and J1 (SWD
    header) use real footprints from KiCad's or DigiKey's official
-   libraries. SW2-SW5 (L/R/FN buttons and the wheel's middle-click) use a
-   hand-drawn footprint for the Omron D2FC-F-7N(20M) — the de-facto DIY
-   mouse-switch aftermarket standard body, chosen deliberately over an SMD
-   tactile switch so common 2-pin/3-pin swap-in switches (Kailh GM series,
-   Huano, TTC) solder directly onto this board. ENC1 (the scroll wheel
+   libraries. SW2/SW3 (L/R buttons) use a hand-drawn footprint for the
+   Omron D2FC-F-7N(20M) — the de-facto DIY mouse-switch aftermarket
+   standard body, chosen deliberately over an SMD tactile switch so common
+   2-pin/3-pin swap-in switches (Kailh GM series, Huano, TTC) solder
+   directly onto this board. SW5 (the wheel's middle-click) uses a
+   different, much lower-profile part (Omron B3U-1000P) to clear the
+   scroll wheel mounted above it — see [open-items.md](open-items.md).
+   SW4 (the function button) was removed during layout; there is no
+   fourth button on this board. ENC1 (the scroll wheel
    encoder) is a TTC/Kailh-style mouse encoder with an explicitly
    unconfirmed placeholder footprint, since no manufacturer datasheet
    exists for this part class — see

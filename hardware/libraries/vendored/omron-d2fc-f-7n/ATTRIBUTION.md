@@ -82,6 +82,8 @@ switch body's long axis (with its 3 pins) along a different local axis
 than the footprint expects, and its own origin sits at one corner of
 the body rather than the center. The footprint's `(model ...)` block
 applies a 90° rotation about Z plus a matching `(-6.4, 2.9, 0)` offset
-to correct both — confirmed by rendering all four instances (SW2,
-SW3, SW4, SW5, at different board rotations) with `kicad-cli pcb
+to correct both — confirmed by rendering all instances (at the time,
+SW2, SW3, SW4, SW5, at different board rotations) with `kicad-cli pcb
 render` and checking each sits flat and centered on its 3 THT pads.
+(SW4 was later removed and SW5 later swapped to a different, lower-
+profile part — this footprint is now only used by SW2 and SW3.)

@@ -25,7 +25,7 @@ This reflects the actual connections drawn in `hardware/custom-wireless-mouse.ki
 | 11 | P0.14 | Net **WHEEL_B** → ENC1 pin B |
 | 13 | P0.16 | Net **BTN_L** → SW2 pin 1 (COM) |
 | 14 | P0.18 | Net **BTN_R** → SW3 pin 1 (COM) |
-| 15 | P0.20 | Net **BTN_FN** → SW4 pin 1 (COM) |
+| 15 | P0.20 | **Unconnected (no-connect flag)** — was BTN_FN → SW4; SW4 (the function button) was removed during PCB layout due to space constraints (see [open-items.md](open-items.md)) |
 | 26 | P0.25 | Net **BTN_SCRL** → SW5 pin 1 (COM) — wheel middle-click |
 | 2, 3, 12, 27, 28 | P0.00, P0.01, P0.15, P0.28, P0.30 | **Unconnected (no-connect flags)** — reserved spare GPIOs, not used by this design |
 
@@ -115,31 +115,27 @@ pin positions on the real part are unconfirmed** (see
 
 ## SW5 — wheel middle-click switch (Omron B3U-1000P)
 
-**Currently unwired**, as of the 2026-09-27 part swap. SW5 previously
-used the same Omron D2FC-F-7N(20M) as SW2-4, but that part's 6.5mm
-body is too tall to fit underneath the scroll wheel, which mounts on
-ENC1's shaft directly above SW5. Replaced with the Omron B3U-1000P
-(1.6mm height, 2-pin SPST-NO) — see
+SW5 previously used the same Omron D2FC-F-7N(20M) as SW2/SW3, but that
+part's 6.5mm body was too tall to fit underneath the scroll wheel, which
+mounts on ENC1's shaft directly above SW5. Replaced 2026-09-27 with the
+Omron B3U-1000P (1.6mm height, 2-pin SPST-NO) — see
 [`hardware/libraries/vendored/omron-b3u-1000p/ATTRIBUTION.md`](../../hardware/libraries/vendored/omron-b3u-1000p/ATTRIBUTION.md)
 for the part-selection detail.
 
 This is a simpler 2-terminal part (no COM/NO/NC distinction like the
-D2FC), and its previous connections (pin 1 → `BTN_SCRL`, pin 3 → `GND`)
-were removed along with the old symbol rather than carried over blind,
-since the new part's pinout isn't a 1:1 match. To restore the same
-electrical behavior:
+D2FC). It has since been rewired to the same electrical behavior as the
+old part:
 
-| Pin | Suggested connection |
+| Pin | Connects to |
 |---|---|
 | 1 | Net **BTN_SCRL** |
 | 2 | Net **GND** |
 
 Both pins are physically symmetric (per the datasheet: "No terminal
-numbers are indicated on the Switches"), so either pad may take either
-net. Still needs: schematic wiring, PCB re-placement under the wheel
-(the new footprint is far smaller and not yet positioned), and a
-physical mounting height check once the wheel/carriage mechanical
-design exists (see [open-items.md](open-items.md)).
+numbers are indicated on the Switches"), so this pin assignment was a
+free choice. Placed on the PCB next to ENC1 — see
+[open-items.md](open-items.md) for the still-unconfirmed physical
+mounting height check once the wheel/carriage mechanical design exists.
 
 ## J1 — SWD header (Samtec TSW-104-07-T-S)
 
