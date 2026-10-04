@@ -19,7 +19,7 @@ completeness, but don't apply to this design (rigid 2-layer FR-4 board).
 | Min. track width/spacing (1oz, 2-layer) | 0.10/0.10mm (4/4 mil) | 0.2mm / 0.15mm clearance rule | ✅ (2x margin) |
 | Min. drill diameter | 0.15mm (2+ layer) | Smallest THT drill used: 0.75mm (U2) | ✅ |
 | Min. PTH annular ring (2-layer, 1oz) | Recommended ≥0.25mm; **absolute minimum 0.18mm** | All component (THT) pads: 0.25–0.5mm ring | ✅ |
-| Min. PTH annular ring — **vias** | Same 0.18mm absolute floor applies | **All 50 vias: 0.6mm pad / 0.3mm drill → 0.15mm ring** | ❌ **below JLCPCB's stated absolute minimum for a 2-layer board — see finding below** |
+| Min. PTH annular ring — **vias** | Same 0.18mm absolute floor applies | All 50 vias: 0.8mm pad / 0.3mm drill → 0.25mm ring | ✅ (meets JLCPCB's *recommended* value, not just the floor) |
 | Min. NPTH annular ring | ≥0.45mm | No NPTH holes in this design | ✅ (n/a) |
 | Min. SMD pad | 0.25×0.25mm | Smallest SMD pad (0402 passives): 0.5×0.6mm | ✅ |
 | SMD pad-to-pad clearance (different nets) | 0.15mm | Board clearance rule: 0.15mm (meets, no margin) | ✅ (exact minimum, not a violation) |
@@ -27,46 +27,30 @@ completeness, but don't apply to this design (rigid 2-layer FR-4 board).
 | Surface finish | HASL, ENIG, OSP | Not yet selected (ordering-time choice) | — |
 | Solder mask colors | Green/Purple/Red/Yellow/Blue/White/Black | Not yet selected (ordering-time choice) | — |
 
-## Finding: via annular ring is undersized for JLCPCB
+## Resolved finding: via annular ring was undersized for JLCPCB
 
-Every via on the board (50 total, all `0.6mm` pad diameter / `0.3mm`
-drill) has an annular ring of **0.15mm** — `(0.6 - 0.3) / 2`. JLCPCB's
-own capability page states the **absolute minimum** PTH annular ring
-for a standard 2-layer, 1oz-copper board is **0.18mm**, with 0.25mm or
-above recommended. 0.15mm is below even their stated hard floor for a
-2-layer board (it would only be reachable on a multilayer board, whose
-absolute minimum is separately listed as 0.15mm).
+Originally, every via on the board (50 total, all `0.6mm` pad diameter
+/ `0.3mm` drill) had an annular ring of **0.15mm** — `(0.6 - 0.3) / 2`.
+JLCPCB's own capability page states the **absolute minimum** PTH
+annular ring for a standard 2-layer, 1oz-copper board is **0.18mm**,
+with 0.25mm or above recommended — so 0.15mm was below even their
+stated hard floor for a 2-layer board.
 
-**I did not fix this by simply resizing the vias.** I tried bumping all
-50 vias to 0.7mm and 0.8mm pad diameter (keeping the 0.3mm drill) and
-re-ran `kicad-cli pcb drc` after each: violations jumped from the
-1 pre-existing error to 69 and then 86 clearance violations,
-respectively. The routing was evidently done tight around the original
-0.6mm via size, so widening every via in place collides with
-neighboring copper everywhere. Fixing this properly requires actually
-rerouting around larger vias (or selectively moving/removing the worst-
-affected ones), which is a layout judgment call — not something to
-force through a blanket parameter change. **The PCB file in the repo
-still has the original 0.6mm/0.3mm vias** (i.e. this was investigated,
-not silently patched).
+I first tried fixing this by blanket-resizing all 50 vias to 0.7mm and
+0.8mm pad diameter via a script: both attempts broke clearance
+elsewhere (69 and 86 new DRC violations respectively), since the
+routing had been done tight around the original 0.6mm via size, so I
+reverted both attempts rather than force it through.
 
-Options, in rough order of effort:
-1. Rework routing in the affected areas to fit 0.7–0.8mm vias (0.2–0.25mm ring).
-2. Ask JLCPCB support directly whether 0.15mm ring is orderable as a
-   paid exception on a 2-layer board before assuming it's a hard
-   reject — their page notes some tighter-than-standard specs are
-   available "at additional cost," and this is close enough to their
-   stated floor that it may be worth a direct check rather than
-   reflowing the whole board.
-3. Reduce via drill from 0.3mm to 0.2mm instead of growing the pad —
-   JLCPCB's stated minimum via hole is 0.15–0.2mm (ENIG/OSP, ≤1mm board
-   thickness), which would let a smaller pad (e.g. 0.56mm, keeping the
-   same footprint) hit the 0.18mm ring floor without changing routing
-   geometry at all. Worth trying first since it doesn't require
-   rerouting — a smaller drill doesn't collide with neighboring copper
-   the way a bigger pad does.
-
-See [open-items.md](open-items.md) for this tracked as an open item.
+**Resolved 2026-10-04:** manually reworked the routing and resized all
+50 vias to `0.8mm` pad / `0.3mm` drill (**0.25mm** ring — meets
+JLCPCB's *recommended* value, not just the 0.18mm floor). `kicad-cli
+pcb drc` confirms no new violations were introduced (still just the 1
+pre-existing antenna-keepout error — see below — and 0 unconnected
+items). The project's net-class via defaults and DRC rule floor
+(`min_via_annular_width`) were also updated to `0.8mm`/`0.18mm` so any
+via added later via the GUI inherits JLCPCB-compliant sizing by
+default.
 
 ## PCB assembly (PCBA) capabilities
 
@@ -111,6 +95,8 @@ with high-temp PI film), 10×10mm–1200×490mm sizes.
 - All THT component holes (ENC1, J1, J2, SW2, SW3, U2) have drill/pad
   combinations giving 0.25–0.5mm annular ring — comfortably above
   JLCPCB's component-hole minimum.
+- All 50 vias now meet JLCPCB's *recommended* annular ring (0.25mm),
+  not just their absolute minimum — see the resolved finding above.
 - Track widths used (0.2mm, 0.3mm) and the board's clearance rule
   (0.15mm) are at or above JLCPCB's 1oz/2-layer minimums, with no
   track/spacing combination anywhere near their 0.10/0.10mm floor.
