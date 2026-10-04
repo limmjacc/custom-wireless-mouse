@@ -38,6 +38,8 @@ around parts that don't have that problem.
   library sourcing for entering this design into KiCad
 - [Open items / verification checklist](open-items.md) — what's still
   unconfirmed before this design is buildable
+- [JLCPCB manufacturing capabilities](jlcpcb-capabilities.md) — this
+  design's PCB/PCBA specs checked against JLCPCB's published limits
 - [Sources](sources.md) — references consulted during the design
 
 ## Scope note
